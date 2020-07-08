@@ -1,0 +1,14 @@
+.work h1, h2, h3, h4 {
+  color: #015e98;
+}
+
+.work p {
+  color: #9f9090;
+}
+
+.work-navbar {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background-color: #07568a;
+}

@@ -1,0 +1,14 @@
+.contact h1, h2, h3, h4 {
+  color: #015e98;
+}
+
+.contact p {
+  color: #9f9090;
+}
+
+.contact-navbar {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background-color: #07568a;
+}

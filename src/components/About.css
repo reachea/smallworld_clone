@@ -1,0 +1,19 @@
+.about h1, h2, h3, h4 {
+  color: #015e98;
+}
+
+.about p {
+  font-size: 25px;
+  color: #8e8b8c;
+}
+
+.about-navbar {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background-color: #07568a;
+}
+
+.about-content-1 {
+  padding-top: 70px;
+}

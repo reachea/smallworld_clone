@@ -1,0 +1,67 @@
+.home h1, h2, h3, h4 {
+  color: white;
+}
+
+.home p {
+  font-size: 20px!important;
+  color: #edecec;
+}
+
+.span-1 {
+  color: #fcc400;
+}
+
+.span-btn-1 {
+  font-weight: 500;
+  font-size: 16px !important;
+  margin-bottom: 3px;
+}
+
+/* */
+
+.home-navbar {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+}
+
+.home-content-1 {
+  background-image: url('../images/banner.png');
+  background-position: bottom;
+  background-size: inherit;
+  height: 50vw!important;
+  background-repeat: no-repeat;
+  padding-top: 120px;
+}
+
+/* Learn more button */
+
+.learnMore-btn {
+  min-height: 1em;
+  height: 40px;
+  width: 171px;
+}
+
+.ant-btn {
+  border-radius: 1.5em;
+  background-color: white;
+  border-color: transparent;
+  color: #015e98;
+}
+
+.ant-btn-primary {
+  background-color: white;
+}
+
+.ant-btn:hover {
+  background-color: white;
+  color: #8e8b8c;
+  transition: .3s !important;
+  transform: translateY(-4px);
+}
+
+.ant-btn:focus {
+  background-color: white;
+  border-color: transparent;
+  color: #015e98;
+}

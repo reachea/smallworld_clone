@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import '../node_modules/antd/dist/antd.css';
+
+/* Container */
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Layout */
+
+/* Header */
+
+.ant-layout-header {
+  background: none;
+}
+
+.logo {
+  float: left;
+  content: url('./images/logo/sw-green.png');
+  height: 75px;
+  width: 134px;
+  cursor: pointer;
+}
+
+.ant-menu {
+  padding-top: 5px;
+  float: right;
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+.ant-menu-horizontal {
+  border-bottom: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ant-menu-horizontal > .ant-menu-item-selected {
+  color: orange;
+  border-bottom: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ant-menu-horizontal > .ant-menu-item:hover {
+  border-bottom: none;
+  color: white;
+}
+
+.ant-menu-item {
+  transition: none;
+  -webkit-transition: none;
+}
+
+/* Content */
+
+.all-content {
+  padding-top: 0px;
+  text-align: left;
+}
+
+.ant-layout-content {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Footer */
+
+.ant-layout-footer {
+  height: 100px;
+  background: #dbdcdd;
+}
+
+/* Other Components */
+
+.separator {
+  height: 10px;
 }
