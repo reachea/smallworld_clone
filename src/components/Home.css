@@ -17,12 +17,11 @@
   margin-bottom: 3px;
 }
 
-/* */
+/* Home Content I */
 
 .home-navbar {
   width: 100%;
-  position: absolute;
-  top: 0px;
+  padding-top: 40px;
 }
 
 .home-content-1 {
@@ -31,12 +30,11 @@
   background-size: inherit;
   height: 50vw!important;
   background-repeat: no-repeat;
-  padding-top: 120px;
 }
 
 /* Learn more button */
 
-.learnMore-btn {
+.home-btn {
   min-height: 1em;
   height: 40px;
   width: 171px;
@@ -64,4 +62,77 @@
   background-color: white;
   border-color: transparent;
   color: #015e98;
+}
+
+/* Home Content II */
+
+.home-content-2 {
+  height: 603px;
+  background-color: #f5f5f5;
+}
+
+.home-list {
+  padding-top: 30px;
+}
+
+.home-list-item {
+  background-color: #ebebeb;
+  min-height: 500px;
+}
+
+.home-item-1 {
+  background-image: url('../images/blurb-1.png');
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.home-item-2 {
+  background-image: url('../images/blurb-2.png');
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.home-item-3 {
+  background-image: url('../images/blurb-3.png');
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.home-item-4 {
+  background-image: url('../images/blurb-4.png');
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.home-list-content {
+  padding: 200px 15px 0px 15px ;
+}
+
+.home-list-content > h2 {
+  text-align: center;
+}
+
+.home-list-content > p {
+  color: #979a9a;
+  text-align: left;
+  font-size: 18px !important;
+  line-height: 25px;
+}
+
+/* Home Content III */
+.home-content-3 {
+  min-height: 530px;
+  background-image: url(../images/banner-2.png);
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.home-banner2 {
+  padding: 6% 0;
+}
+
+.home-banner2-content > p {
+  font-size: 19px !important;
+  padding-right: 25px;
 }

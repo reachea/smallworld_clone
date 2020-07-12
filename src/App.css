@@ -35,48 +35,6 @@
 
 /* Layout */
 
-/* Header */
-
-.ant-layout-header {
-  background: none;
-}
-
-.logo {
-  float: left;
-  content: url('./images/logo/sw-green.png');
-  height: 75px;
-  width: 134px;
-  cursor: pointer;
-}
-
-.ant-menu {
-  padding-top: 5px;
-  float: right;
-  background: none;
-  border: none;
-  font-size: 20px;
-}
-
-.ant-menu-horizontal {
-  border-bottom: none;
-  color: white;
-}
-
-.ant-menu-horizontal > .ant-menu-item-selected {
-  color: orange;
-  border-bottom: none;
-}
-
-.ant-menu-horizontal > .ant-menu-item:hover {
-  border-bottom: none;
-  color: white;
-}
-
-.ant-menu-item {
-  transition: none;
-  -webkit-transition: none;
-}
-
 /* Content */
 
 .all-content {
@@ -87,13 +45,6 @@
 .ant-layout-content {
   min-height: 100vh;
   position: relative;
-}
-
-/* Footer */
-
-.ant-layout-footer {
-  height: 100px;
-  background: #dbdcdd;
 }
 
 /* Other Components */
