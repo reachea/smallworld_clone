@@ -1,3 +1,54 @@
 .footNavBar {
-  height: 410px;
+  min-height: 355px;
+}
+
+.span-footer-1 {
+  color: #8e8b8c;
+  font-size: 20px !important;
+}
+
+.foot-nav {
+  height: 45px;
+}
+
+.footer {
+  padding-top: 4% !important;
+}
+
+.footer-logo {
+  height: 100px;
+  background-image: url(./images/logo/Logo_SW_Gray.png);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.telegram-foot {
+  background-image: url('./images/socialMedia/telegram.svg');
+  background-size: 32px;
+  background-position: left;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50px;
+  padding-left: 35px;
+}
+
+.facebook-foot {
+  background-image: url('./images/socialMedia/facebook.svg');
+  background-size: 32px;
+  background-position: left;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50px;
+  padding-left: 35px;
+}
+
+.twitter-foot {
+  background-image: url('./images/socialMedia/twitter.svg');
+  background-size: 32px;
+  background-position: left;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 50px;
+  padding-left: 35px;
 }

@@ -38,30 +38,16 @@
   min-height: 1em;
   height: 40px;
   width: 171px;
-}
-
-.ant-btn {
-  border-radius: 1.5em;
   background-color: white;
   border-color: transparent;
   color: #015e98;
+  border-radius: 1.5em;
 }
-
-.ant-btn-primary {
-  background-color: white;
-}
-
-.ant-btn:hover {
+.home-btn:hover {
   background-color: white;
   color: #8e8b8c;
   transition: .3s !important;
   transform: translateY(-4px);
-}
-
-.ant-btn:focus {
-  background-color: white;
-  border-color: transparent;
-  color: #015e98;
 }
 
 /* Home Content II */
