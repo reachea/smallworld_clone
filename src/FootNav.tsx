@@ -23,13 +23,13 @@ class FootNav extends Component {
                 <Col span={7} ></Col>
                 <Col span={7} ></Col>
                 <Col span={4} >
-                  <Link to="/about">
+                  <a href="https://t.me/smallworldventure" target="_blank" rel="noopener noreferrer">
                     <div className="telegram-foot" >
                       <Button type="link" className="foot-nav" >
                         <span className="span-footer-1" >Telegram</span>
                       </Button>
                     </div>
-                  </Link>
+                  </a>
                 </Col>
               </Row>
               <Row>
@@ -43,13 +43,13 @@ class FootNav extends Component {
                 <Col span={7} ></Col>
                 <Col span={7} ></Col>
                 <Col span={4} >
-                  <Link to="/news">
+                  <a href="https://www.facebook.com/smallworldventure/" target="_blank" rel="noopener noreferrer">
                     <div className="facebook-foot" >
                       <Button type="link" className="foot-nav" >
                         <span className="span-footer-1" >Facebook</span>
                       </Button>
                     </div>
-                  </Link>
+                  </a>
                 </Col>
               </Row>
               <Row>
@@ -63,13 +63,13 @@ class FootNav extends Component {
                 <Col span={7} ></Col>
                 <Col span={7} ></Col>
                 <Col span={4} >
-                  <Link to="/news">
+                  <a href="https://twitter.com/smallworldvc" target="_blank" rel="noopener noreferrer">
                     <div className="twitter-foot" >
                       <Button type="link" className="foot-nav" >
                         <span className="span-footer-1" >twitter</span>
                       </Button>
                     </div>
-                  </Link>
+                  </a>
                 </Col>
               </Row>
               <Row>

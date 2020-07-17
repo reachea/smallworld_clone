@@ -2,8 +2,13 @@
   color: #015e98;
 }
 
+.work h2 {
+  font-size: 28px !important;
+}
+
 .work p {
-  color: #9f9090;
+  font-size: 20px !important;
+  color: #8e8b8c;
 }
 
 .works-navbar {
@@ -11,4 +16,59 @@
   position: absolute;
   top: 0px;
   background-color: #07568a;
+}
+
+.work-content-1 {
+  padding-top: 140px;
+  min-height: 500px;
+}
+
+.work-content {
+  padding-top: 50px;
+  min-height: 500px;
+}
+
+.work-content-right {
+  padding-right: 60px;
+}
+
+.work-content-left {
+  padding-left: 60px;
+}
+
+.work-img {
+  width: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.work-img-1 {
+  background-image: url('../images/blurb-5.png');
+  background-size: 100% 300px;
+  height: 300px;
+}
+
+
+.work-img-2 {
+  background-image: url('../images/Work/investment.png');
+  background-size: 100% 400px;
+  height: 500px;
+}
+
+.work-img-3 {
+  background-image: url('../images/Work/venture-building.png');
+  background-size: 100% 400px;
+  height: 600px;
+}
+
+.work-img-4 {
+  background-image: url('../images/Work/reforest.png');
+  background-size: 100% 400px;
+  height: 500px;
+}
+
+.work-separator {
+  height: 100px;
+  width: 100%;
+  background-color: #ffffff;
 }

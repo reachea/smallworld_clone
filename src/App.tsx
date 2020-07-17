@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import FootNav from './FootNav';
@@ -21,10 +21,6 @@ interface AppState {
 
 
 class App<T> extends React.Component< T , AppState> {
-
-  constructor(props: T) {
-    super(props);
-  }
 
   render() {
     return(

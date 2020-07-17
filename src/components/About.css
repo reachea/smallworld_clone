@@ -2,11 +2,16 @@
   color: #015e98;
 }
 
+.about h2 {
+  font-size: 28px !important;
+}
+
 .about p {
-  font-size: 25px;
+  font-size: 20px !important;
   color: #8e8b8c;
 }
 
+/* NavBar */
 .about-navbar {
   width: 100%;
   position: absolute;
@@ -14,6 +19,166 @@
   background-color: #07568a;
 }
 
+
+/* Content I */
 .about-content-1 {
   padding-top: 70px;
+  min-height: 760px;
+  background-image: url('../images/About/banner-3.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: inherit;
+  background-position-x: 780px;
+}
+
+.about-paragraph-1 {
+  margin-top: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Content II */
+
+.about-content-2 {
+  min-height: 500px;
+}
+
+.about-content-2-img {
+  margin-top: 50px;
+  min-height: 450px;
+  width: 100%;
+  background-image: url('../images/About/banner-4.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-content-2-paragraph {
+  margin-top: 120px;
+}
+
+.about-logo-item {
+  height: 50px;
+  width: 100%;
+  background-size: 100% 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-logo-item-1 {
+  background-image: url('../images/About/logo-item-1.png');
+}
+
+.about-logo-item-2 {
+  height: 45px;
+  width: 100%;
+  background-image: url('../images/About/logo-item-2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-logo-item-3 {
+  background-image: url('../images/About/logo-item-3.png');
+}
+
+.about-logo-item-4 {
+  background-image: url('../images/About/logo-item-4.png');
+}
+
+.about-logo-item-5 {
+  background-image: url('../images/About/logo-item-5.png');
+}
+
+.about-logo-item-6 {
+  background-image: url('../images/About/logo-item-6.png');
+}
+
+/* Content III */
+.about-content-3 {
+  min-height: 650px;
+  padding-top: 100px;
+  background-color: #f0f1f3;
+}
+
+.about-content-header {
+  text-align: center;
+}
+
+.about-board {
+  margin-top: 50px;
+}
+
+.board-content {
+  padding-top: 20px;
+}
+
+.board-content > h3 {
+  font-size: 18px !important;
+}
+
+.board-content > p {
+  font-size: 17px !important;
+}
+
+.board-img {
+  height: 190px !important;
+  width: 100%;
+  background-size: 200px 190px;
+  background-position: top;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.board-img:hover {
+  transition: .3s !important;
+  transform: translateY(-4px);
+  box-shadow: 0 0 40px 0 hsla(0,0%,77.3%,.85);
+}
+
+.board-img-1{
+  background-image: url('../images/About/Rithy.jpg');
+}
+
+.board-img-2{
+  background-image: url('../images/About/mr-lin-willson.jpg');
+}
+
+.board-img-3{
+  background-image: url('../images/About/Ratana.jpg');
+}
+
+.board-img-4{
+  background-image: url('../images/About/mr-sila-chy.jpeg');
+}
+
+.board-img-5{
+  background-image: url('../images/About/mr-sen-kang.jpeg');
+}
+
+/* Content IV */
+.about-content-4 {
+  min-height: 500px;
+  padding-top: 100px;
+}
+
+.about-logo-partner {
+  width: 150px;
+  height: 150px;
+  background-size: 150px 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-logo-item-7 {
+  background-image: url('../images/About/logo-item-7.png');
+}
+
+.about-logo-item-8 {
+  background-image: url('../images/About/logo-item-8.png');
+}
+
+.about-logo-item-9 {
+  background-image: url('../images/About/logo-item-9.png');
 }
