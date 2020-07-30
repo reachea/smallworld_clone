@@ -22,13 +22,14 @@
 .home-navbar {
   width: 100%;
   padding-top: 40px;
+  min-height: 50vw!important;
 }
 
 .home-content-1 {
   background-image: url('../images/banner.png');
   background-position: bottom;
   background-size: inherit;
-  height: 50vw!important;
+  min-height: 50vw!important;
   background-repeat: no-repeat;
 }
 
@@ -221,4 +222,31 @@
 .item-btn > p {
   font-size: 12px !important;
   color: #015e98;
+}
+
+/* Responsive */
+
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+  .ant-col-12 {
+    flex: initial;
+    max-width: none;
+  }
+  .home-navbar {
+    padding-bottom: 50px;
+  }
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1400px) {
+  .home-content-1 {
+    background-image: none;
+    background-color: #053f64;
+    background-position: bottom;
+    background-size: inherit;
+    min-height: 50vw!important;
+    background-repeat: no-repeat;
+  }
 }

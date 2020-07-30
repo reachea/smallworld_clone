@@ -17,7 +17,7 @@ class Home extends Component {
           <div className="container home-navbar">
             <h1 > <span className="span-1" >{'<'}</span> Homegrown Startup Community <span className="span-1" >{'/>'}</span></h1>
             <Row>
-              <Col span={12} >
+              <Col span={12} className="home-navbar-1" >
                 <p>
                 We began in 2011 by providing a collaborative workspace environment for entrepreneurs, and then quickly moved forward raising investment capital to fund new startup projects.
                 </p>
@@ -31,7 +31,7 @@ class Home extends Component {
                   </Button>
                 </Link>
               </Col>
-              <Col span={12} >
+              <Col span={12} className="home-navbar-2" >
               </Col>
             </Row>
           </div>
