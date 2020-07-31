@@ -31,9 +31,9 @@ class Contact<T> extends Component<T> {
         <div className="contact-navbar" >
           <Nav />
         </div>
-        <div className="container contact-content-1">
-            <Row>
-              <Col span={12} className="left-content" >
+        <div className="container container-2 contact-content-1">
+            <Row className="contact-list" >
+              <Col span={12} className="left-content contact-item-mobile-1" >
                 <h2>Inquiries Request</h2>
                 <div>
                   <Form {...layout} name="basic" initialValues={{ remember: true }} onFinish={onFinish} onFinishFailed={onFinishFailed} className="contact-form" >
@@ -63,11 +63,11 @@ class Contact<T> extends Component<T> {
                   </Form>
                 </div>
               </Col>
-              <Col span={12} className="right-content" >
+              <Col span={12} className="right-content contact-item-mobile-1" >
                 <h2>Our Office</h2>
                 <Row>
                   <Col span={2}>
-                    <div className="right-content-img-1" >
+                    <div className="right-content-img-1 content-img" >
 
                     </div>
                   </Col>
@@ -83,7 +83,7 @@ class Contact<T> extends Component<T> {
                 <br />
                 <Row>
                   <Col span={2}>
-                    <div className="right-content-img-2" >
+                    <div className="right-content-img-2 content-img" >
 
                     </div>
                   </Col>
@@ -98,7 +98,7 @@ class Contact<T> extends Component<T> {
                 <br />
                 <Row>
                   <Col span={2}>
-                    <div className="right-content-img-3" >
+                    <div className="right-content-img-3 content-img" >
 
                     </div>
                   </Col>
@@ -114,16 +114,16 @@ class Contact<T> extends Component<T> {
             </Row>
           </div>
           <div className="contact-content-map" >
-            <Row>
-              <Col span={5} >
+            <Row className="map-list" >
+              <Col span={5} className="map-item-mobile-1-hidden" >
               </Col>
-              <Col span={7} >
+              <Col span={7} className="map-item-mobile-1 paragraph-3" >
                 <h2>SmallWorld</h2>
                 <p>We look forward to welcome you at any working hour. Though, most of the time there are someone at SmallWorld. There are several startups in the same building, so make sure you know who you are looking for. We will surely direct you to the right person!</p>
                 <p>Look at the map, 2F-01, Raintree, #299 Preah Ang Duong, Sangkat Wat Phnom, Khan Daun Penh! Come walk around and feel it yourself.</p>
               </Col>
-              <Col span={12} >
-              <div style={{ height: '400px', width: '100%' }}>
+              <Col span={12} className="map-item-mobile-1" >
+              <div style={{ height: '100%', width: '100%' }}>
                 <GoogleMapReact
                   bootstrapURLKeys={{ key: "GOOGLE_API_KEY" }}
                   defaultCenter={{ lat: 11.556374, lng: 104.928207 }}

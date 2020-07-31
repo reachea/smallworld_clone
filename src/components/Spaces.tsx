@@ -13,10 +13,10 @@ class Spaces extends Component {
         </div>
         
         <div className="space-content-1">
-          <div className="container" >
-            <Row>
-              <Col span={9} >
-                <div className="space-paragraph" >
+          <div className="container container-2 container-3" >
+            <Row className="row-list" >
+              <Col span={10} className="row-item-mobile-1" >
+                <div className="space-paragraph row-item-mobile-1" >
                   <h1>Working community of professionals, creatives and artists</h1>
                   <br/>
                   <br/>
@@ -31,7 +31,8 @@ class Spaces extends Component {
                   <div className="go-down"></div>
                 </a>
               </Col>
-              <Col span={15} >
+              <Col span={1} className="row-item-mobile-1"></Col>
+              <Col span={13} className="row-item-mobile-1" >
                 <div className="space-banner">
                 </div>
               </Col>
@@ -41,14 +42,14 @@ class Spaces extends Component {
 
 
         <div className="space-content-2">
-          <div className="container">
-            <Row>
-              <Col span={6}>
+          <div className="container container-2 ">
+            <Row className="row-list" >
+              <Col span={6} className="row-item-mobile-1" >
                 <div id="space-about" >
                   <h1>About</h1>
                 </div>
               </Col>
-              <Col span={18}>
+              <Col span={18} className="row-item-mobile-1">
                 <div className="space-content">
                   <p>SmallWorld provides professional shared workspace and business accelerator space where freelancers, newly forming and existing enterprises can collaborate in a professional, productive, flexible and innovative workspace with established experts.</p>
                   <p>SmallWorld Realty spaces are located and designed to be an integral hub for the Southeast Asian business and startup community offering the benefits you have come to expect from a full service provider.</p>
@@ -95,14 +96,14 @@ class Spaces extends Component {
 
 
         <div className="space-content-2">
-          <div className="container">
-            <Row>
-              <Col span={6}>
+          <div className="container container-2">
+            <Row className="row-list" >
+              <Col span={6} className="row-item-mobile-1">
                 <div>
                   <h1>Why SmallWorld Realty?</h1>
                 </div>
               </Col>
-              <Col span={18}>
+              <Col span={18} className="row-item-mobile-1">
                 <div className="space-content">
                   <p>We spent approximately one-third of our day at work. What defines a good work space and what are the factors that contribute to productivity and results?</p>
                   <p>SmallWorld actively explores these components to ensure that we can deliver the best work environment for you! SmallWorld Realty spaces are located in commercial areas of Phnom Penh, acting as a convenient headquarters for professionals and start-ups.</p>
@@ -115,14 +116,14 @@ class Spaces extends Component {
 
 
         <div className="space-content-2">
-          <div className="container">
-            <Row>
-              <Col span={6}>
+          <div className="container container-2">
+            <Row className="row-list" >
+              <Col span={6} className="row-item-mobile-1" >
                 <div>
                   <h1>SmallWorld<br/>Raintree</h1>
                 </div>
               </Col>
-              <Col span={18}>
+              <Col span={18} className="row-item-mobile-1" >
                 <div className="space-content">
                   <p>If you are looking for a professional, corporate-style work space in the heart of the city, SmallWorld Raintree might be your best fit. We offer full-range services from high-speed wifi, utilities, meeting room(s), and event spaces. What’s more? Most people know where Raintree is so you don’t have to break a sweat giving directions to your clients.</p>
                 </div>
@@ -133,14 +134,14 @@ class Spaces extends Component {
 
 
         <div className="space-content-2">
-          <div className="container">
-            <Row>
-              <Col span={6}>
+          <div className="container container-2">
+            <Row className="row-list" >
+              <Col span={6} className="row-item-mobile-1" >
                 <div>
                   <h1>SmallWorld Pteas Boran</h1>
                 </div>
               </Col>
-              <Col span={18}>
+              <Col span={18} className="row-item-mobile-1" >
                 <div className="space-content">
                   <p>What if your team likes your space a little unconventional? We’d like to introduce you to a more homely option. Small World Pteas Boran offers multiple array of rooms to choose from, each of which has its own charm. It isn’t your typical white-wall, glass-door kind of room and maybe that is why your team might like it more!</p>
                 </div>
@@ -151,16 +152,16 @@ class Spaces extends Component {
 
 
         <div className="contact-content-map" >
-            <Row>
-              <Col span={5} >
+            <Row className="map-list" >
+              <Col span={5} className="map-item-mobile-1-hidden" >
               </Col>
-              <Col span={7} >
+              <Col span={7} className="map-item-mobile-1 paragraph-3" >
                 <h2>SmallWorld</h2>
                 <p>We look forward to welcome you at any working hour. Though, most of the time there are someone at SmallWorld. There are several startups in the same building, so make sure you know who you are looking for. We will surely direct you to the right person!</p>
                 <p>Look at the map, 2F-01, Raintree, #299 Preah Ang Duong, Sangkat Wat Phnom, Khan Daun Penh! Come walk around and feel it yourself.</p>
               </Col>
               <Col span={12} >
-              <div style={{ height: '400px', width: '100%' }}>
+              <div style={{ height: '100%', width: '100%' }}>
                 <GoogleMapReact
                   bootstrapURLKeys={{ key: "GOOGLE_API_KEY" }}
                   defaultCenter={{ lat: 11.556374, lng: 104.928207 }}

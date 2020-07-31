@@ -66,7 +66,7 @@
 
 .right-content-img-1 {
   background-image: url('../images/contact/address.png');
-  background-size: 40px;
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
@@ -75,7 +75,7 @@
 
 .right-content-img-2 {
   background-image: url(../images/contact/email.png);
-  background-size: 40px;
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
@@ -84,7 +84,7 @@
 
 .right-content-img-3 {
   background-image: url(../images/contact/telegram.png);
-  background-size: 40px;
+  background-size: 100% auto;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
@@ -116,4 +116,24 @@
   color: white;
   font-size: 18px !important;
   padding-right: 35px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .contact-list {
+    flex-direction: column;
+  }
+
+  .contact-list > .contact-item-mobile-1 {
+    display: block;
+    max-width: none;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .content-img {
+    width: 70%;
+  }
 }

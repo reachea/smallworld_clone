@@ -38,9 +38,7 @@ class Nav<T> extends Component<T, NavState> {
           <Button onClick={this.menuClick} type="text" className="nav-btn nav-menu" icon={this.state.navMenuOpen? <CloseOutlined /> : <MenuOutlined/>} >
           </Button>
 
-          <button onClick={this.menuClick} >
-            <div className="mobile-background" style={{ left: `${this.hideNav? "0px" : "-100vw"}` }} ></div>
-          </button>
+          <div  onClick={this.menuClick} className="mobile-background" style={{ left: `${this.hideNav? "0px" : "-100vw"}` }} ></div>
 
           <Menu className="nav-list" style={{ left: `${this.hideNav? "0px" : "-100vw"}` }} >
             <Menu.Item key="1"  ><NavLink to="/about" className="nav-item" >About</NavLink></Menu.Item>

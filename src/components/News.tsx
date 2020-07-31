@@ -14,9 +14,9 @@ class News extends Component {
 
         <div className="news-content-1">
           <h2>COMMUNITY UPDATE</h2>
-          <div className="container home-community" >
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              <Col span={8} className="gutter-row" >
+          <div className="container container-2 home-community" >
+            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} className="row-list">
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/smallworldvc/smallworld-realty-soft-opening-6efc25e9b3c4" target="_blank" rel="noopener noreferrer">
                     <div className="list-image community-image-1">
@@ -29,7 +29,7 @@ class News extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/smallworldvc/smallworld-for-good-causes-2920ba067b3e" target="_blank" rel="noopener noreferrer">
                     <div className="list-image community-image-2">
@@ -42,7 +42,7 @@ class News extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item" >
                   <a href="https://medium.com/smallworldvc/press-release-smallworld-realty-launches-two-new-locations-65ea1a8697e7" target="_blank" rel="noopener noreferrer">
                     <div className="list-image community-image-3">
@@ -55,7 +55,9 @@ class News extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row newline-content" >
+            </Row>
+            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} className="row-list">
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/smallworldvc/smallworld-for-good-causes-2920ba067b3e" target="_blank" rel="noopener noreferrer">
                     <div className="list-image community-image-2">
@@ -67,6 +69,10 @@ class News extends Component {
                     </div>
                   </a>
                 </div>
+              </Col>
+              <Col span={8}className="gutter-row row-item-mobile-1" >
+              </Col>
+              <Col span={8}className="gutter-row row-item-mobile-1" >
               </Col>
             </Row>
             <a href="https://medium.com/@smallworldvc" target="_blank" rel="noopener noreferrer" >
@@ -80,9 +86,9 @@ class News extends Component {
 
         <div className="news-content-2">
           <h2>KOOMPI NEWS</h2>
-          <div className="container home-community" >
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              <Col span={8} className="gutter-row" >
+          <div className="container container-2 home-community" >
+            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} className="row-list" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/koompi/winners-of-think-think-world-cup-d5113bb24add" target="_blank" rel="noopener noreferrer">
                     <div className="list-image koompi-image-1">
@@ -95,7 +101,7 @@ class News extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/koompi/installing-android-studio-on-koompi-os-86aa5b6b199c" target="_blank" rel="noopener noreferrer">
                     <div className="list-image koompi-image-2">
@@ -108,7 +114,7 @@ class News extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-image community-item" >
                   <a href="https://medium.com/koompi/koompi-to-support-young-volunteers-in-project-competition-78efb1003264" target="_blank" rel="noopener noreferrer">
                     <div className="list-image koompi-image-3">
@@ -121,7 +127,9 @@ class News extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row newline-content" >
+            </Row>
+            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32}} className="row-list" >
+              <Col span={8} className="gutter-row newline-content row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/koompi/winners-of-think-think-world-cup-d5113bb24add" target="_blank" rel="noopener noreferrer">
                     <div className="list-image koompi-image-1">
@@ -134,7 +142,7 @@ class News extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row newline-content" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/koompi/installing-android-studio-on-koompi-os-86aa5b6b199c" target="_blank" rel="noopener noreferrer">
                     <div className="list-image koompi-image-2">
@@ -147,7 +155,7 @@ class News extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row newline-content" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-image community-item" >
                   <a href="https://medium.com/koompi/koompi-to-support-young-volunteers-in-project-competition-78efb1003264" target="_blank" rel="noopener noreferrer">
                     <div className="list-image koompi-image-3">
@@ -168,6 +176,9 @@ class News extends Component {
             </a>
           </div>
         </div>
+
+        <div className="work-separator"></div>
+
       </div>
     );
   }

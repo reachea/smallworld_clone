@@ -17,7 +17,7 @@ class Home extends Component {
           <div className="container home-navbar">
             <h1 > <span className="span-1" >{'<'}</span> Homegrown Startup Community <span className="span-1" >{'/>'}</span></h1>
             <Row>
-              <Col span={12} className="home-navbar-1" >
+              <Col span={12} className="home-navbar-1 paragraph-1" >
                 <p>
                 We began in 2011 by providing a collaborative workspace environment for entrepreneurs, and then quickly moved forward raising investment capital to fund new startup projects.
                 </p>
@@ -31,7 +31,7 @@ class Home extends Component {
                   </Button>
                 </Link>
               </Col>
-              <Col span={12} className="home-navbar-2" >
+              <Col span={12} className="home-navbar-2 paragraph-1" >
               </Col>
             </Row>
           </div>
@@ -39,9 +39,9 @@ class Home extends Component {
 
 
         <div className="home-content-2">
-          <div className="container">
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} className="home-list" >
-                <Col className="gutter-row" span={6}>
+          <div className="container container-2">
+            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} className="row-list" >
+                <Col className="gutter-row row-item-mobile-1" span={6}>
                   <div className="home-list-item home-item-1" >
                     <div className="home-list-content" >
                       <h2>Startup Community</h2>
@@ -49,7 +49,7 @@ class Home extends Component {
                     </div>
                   </div>
                 </Col>
-                <Col className="gutter-row" span={6}>
+                <Col className="gutter-row row-item-mobile-1" span={6}>
                   <div className="home-list-item home-item-2" >
                     <div className="home-list-content" >
                       <h2>Seed Equity Investments</h2>
@@ -57,7 +57,7 @@ class Home extends Component {
                     </div>
                   </div>
                 </Col>
-                <Col className="gutter-row" span={6}>
+                <Col className="gutter-row row-item-mobile-1" span={6}>
                   <div className="home-list-item home-item-3" >
                     <div className="home-list-content" >
                       <h2>Venture Building</h2>
@@ -65,7 +65,7 @@ class Home extends Component {
                     </div>
                   </div>
                 </Col>
-                <Col className="gutter-row" span={6}>
+                <Col className="gutter-row row-item-mobile-1" span={6}>
                   <div className="home-list-item home-item-4" >
                     <div className="home-list-content" >
                       <h2>Ecovillage Development</h2>
@@ -80,7 +80,7 @@ class Home extends Component {
         <div className="home-content-3">
           <div className="container home-banner2">
             <Row gutter={24} >
-              <Col span={13} >
+              <Col span={13} className="paragraph-2" >
                 <div className="home-banner2-content">
                   <h1>Have some ideas for new venture?</h1>
                   <p>We're looking for new approaches to problem solving and creating business.Do you have an innovative idea for a startup venture?</p>
@@ -94,7 +94,7 @@ class Home extends Component {
                   </Link>
                 </div>
               </Col>
-              <Col span={11} >
+              <Col span={11} className="paragraph-2" >
               </Col>
             </Row>
           </div>
@@ -102,9 +102,9 @@ class Home extends Component {
 
         <div className="home-content-4">
           <h2>COMMUNITY UPDATE</h2>
-          <div className="container home-community" >
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              <Col span={8} className="gutter-row" >
+          <div className="container container-2" >
+            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} className="row-list" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/smallworldvc/smallworld-realty-soft-opening-6efc25e9b3c4" target="_blank" rel="noopener noreferrer">
                     <div className="list-image community-image-1">
@@ -117,7 +117,7 @@ class Home extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/smallworldvc/smallworld-for-good-causes-2920ba067b3e" target="_blank" rel="noopener noreferrer">
                     <div className="list-image community-image-2">
@@ -130,7 +130,7 @@ class Home extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item" >
                   <a href="https://medium.com/smallworldvc/press-release-smallworld-realty-launches-two-new-locations-65ea1a8697e7" target="_blank" rel="noopener noreferrer">
                     <div className="list-image community-image-3">
@@ -149,9 +149,9 @@ class Home extends Component {
 
         <div className="home-content-4">
           <h2>KOOMPI NEWS</h2>
-          <div className="container home-community" >
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              <Col span={8} className="gutter-row" >
+          <div className="container container-2" >
+            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} className="row-list" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/koompi/winners-of-think-think-world-cup-d5113bb24add" target="_blank" rel="noopener noreferrer">
                     <div className="list-image koompi-image-1">
@@ -164,7 +164,7 @@ class Home extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-item">
                   <a href="https://medium.com/koompi/installing-android-studio-on-koompi-os-86aa5b6b199c" target="_blank" rel="noopener noreferrer">
                     <div className="list-image koompi-image-2">
@@ -177,7 +177,7 @@ class Home extends Component {
                   </a>
                 </div>
               </Col>
-              <Col span={8} className="gutter-row" >
+              <Col span={8} className="gutter-row row-item-mobile-1" >
                 <div className="community-image community-item" >
                   <a href="https://medium.com/koompi/koompi-to-support-young-volunteers-in-project-competition-78efb1003264" target="_blank" rel="noopener noreferrer">
                     <div className="list-image koompi-image-3">

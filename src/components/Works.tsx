@@ -12,15 +12,15 @@ class Works extends Component {
         </div>
 
         <div className="work-content-1">
-          <div className="container">
-            <Row>
-              <Col span={14} >
+          <div className="container container-2">
+            <Row className="row-list" >
+              <Col span={14} className="row-item-mobile-1" >
                 <div className="work-content-right" >
                   <h2>STARTUP COMMUNITY</h2>
                   <p>Since 2011, SmallWorld has remained focused on their vision of building a vibrant startup community in Phnom Penh through partnering with other area workspace groups to offer greater value and accessibility to early stage startup teams and entrepreneurs.</p>
                 </div>
               </Col>
-              <Col span={10} >
+              <Col span={10} className="row-item-mobile-1" >
                 <div className="work-img work-img-1"></div>
               </Col>
             </Row>
@@ -28,12 +28,12 @@ class Works extends Component {
         </div>
 
         <div className="work-content">
-          <div className="container">
-            <Row>
-              <Col span={10} >
+          <div className="container container-2">
+            <Row className="row-list">
+              <Col span={10} className="row-item-mobile-1" >
                 <div className="work-img work-img-2"></div>
               </Col>
-              <Col span={14} >
+              <Col span={14} className="row-item-mobile-1" >
                 <div className="work-content-left" >
                   <h2>SEED EQUITY INVESTMENTS</h2>
                   <p>Seed Equity Investments are used to form equity investment partnerships which serve as the foundation for building a strong startup community.</p>
@@ -43,13 +43,14 @@ class Works extends Component {
                 </div>
               </Col>
             </Row>
+            <div className="work-img work-img-2-hidden"></div>
           </div>
         </div>
 
         <div className="work-content">
-          <div className="container">
-            <Row>
-              <Col span={14} >
+          <div className="container container-2">
+            <Row className="row-list">
+              <Col span={14} className="row-item-mobile-1" >
                 <div className="work-content-right" >
                   <h2>VENTURE BUILDING</h2>
                   <p>Our branded KOOMPI system is one among several exciting ventures in our portfolio.</p>
@@ -62,7 +63,7 @@ class Works extends Component {
                   <p>Beyond hardware and software, we&aposre building an all natural outdoor learning, living, work, and play environment using industrial hemp and bamboo design as the fundamental basis for production.</p>
                 </div>
               </Col>
-              <Col span={10} >
+              <Col span={10} className="row-item-mobile-1" >
                 <div className="work-img work-img-3"></div>
               </Col>
             </Row>
@@ -70,12 +71,12 @@ class Works extends Component {
         </div>
 
         <div className="work-content">
-          <div className="container">
-            <Row>
-              <Col span={10} >
+          <div className="container container-2">
+            <Row className="row-list">
+              <Col span={10} className="row-item-mobile-1" >
                 <div className="work-img work-img-4"></div>
               </Col>
-              <Col span={14} >
+              <Col span={14} className="row-item-mobile-1" >
                 <div className="work-content-left" >
                   <h2>ENVIRONMENTAL STEWARDSHIP</h2>
                   <p>Environmental stewardship means the responsible use and protection of our natural resources through conservation and sustainable practice.</p>
@@ -86,6 +87,7 @@ class Works extends Component {
                 </div>
               </Col>
             </Row>
+            <div className="work-img work-img-4-hidden"></div>
           </div>
         </div>
         
