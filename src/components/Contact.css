@@ -17,43 +17,11 @@
   background-color: #07568a;
 }
 
-.contact-content-1 {
-  padding-top: 140px;
-}
 
-.contact-form > .form-username > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > #Username {
-  background-color: #ececec;
-  height: 35px;
-  border-radius: 3px;
-}
+/* Form  */
 
-.contact-form > .form-email > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > #Email {
-  background-color: #ececec;
-  height: 35px;
-  border-radius: 3px;
-}
-
-.contact-form > .form-message > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > #Message {
-  background-color: #ececec;
-  height: 200px;
-  border-radius: 3px;
-}
-
-.form-btn {
-  width: 150px;
-  height: 37px;
-  border-radius: 1.5em;
-  background-color: #94bbd4;
-  border: none;
-  color: #015e98;
-  font-weight: 500;
-  padding: 5px 0px 5px 0px;
-}
-
-.form-btn:hover, .form-btn:active, .form-btn:focus {
-  color: #015e98;
-  background-color: #94bbd4;
-  transition: 0s;
+.form-label {
+  font-size: 12px;
 }
 
 .right-content {
@@ -64,76 +32,19 @@
   padding-right: 10px;
 }
 
+
+/* Form Logo */
+
 .right-content-img-1 {
   background-image: url('../images/contact/address.png');
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 40px;
+
 }
 
 .right-content-img-2 {
   background-image: url(../images/contact/email.png);
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 40px;
+
 }
 
 .right-content-img-3 {
   background-image: url(../images/contact/telegram.png);
-  background-size: 100% auto;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 40px;
-}
-
-.right-content-address {
-  font-size: 20px !important;
-  padding-left: 30px;
-  color: #9f9090;
-}
-
-.form-label {
-  font-size: 12px;
-}
-
-.contact-content-map {
-  margin-top: 80px;
-  min-height: 400px;
-  background-color: #015e98;
-}
-
-.contact-content-map > .ant-row > .ant-col > h2 {
-  color: white;
-  padding-top: 25px;
-}
-
-.contact-content-map > .ant-row > .ant-col > p {
-  color: white;
-  font-size: 18px !important;
-  padding-right: 35px;
-}
-
-/* Responsive */
-
-@media (max-width: 768px) {
-
-  .contact-list {
-    flex-direction: column;
-  }
-
-  .contact-list > .contact-item-mobile-1 {
-    display: block;
-    max-width: none;
-    width: 100%;
-    margin-bottom: 30px;
-  }
-
-  .content-img {
-    width: 70%;
-  }
 }

@@ -18,66 +18,31 @@
   background-color: #07568a;
 }
 
-.work-content-1 {
-  padding-top: 140px;
-  min-height: 500px;
-}
-
-.work-content {
-  padding-top: 50px;
-  min-height: 500px;
-}
-
-.work-content-right {
-  padding-right: 60px;
-}
-
-.work-content-left {
-  padding-left: 60px;
-}
-
-.work-img {
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+/* Images */
 
 .work-img-1 {
   background-image: url('../images/blurb-5.png');
-  background-size: 100% auto;
-  height: 500px;
 }
 
 
 .work-img-2 {
   background-image: url('../images/Work/investment.png');
-  background-size: 100% auto;
-  height: 500px;
 }
 
 .work-img-2-hidden {
   background-image: url('../images/Work/investment.png');
-  background-size: 100% auto;
-  height: 500px;
-  display: none;
 }
 
 .work-img-3 {
   background-image: url('../images/Work/venture-building.png');
-  background-size: 100% auto;
-  height: 500px;
 }
 
 .work-img-4 {
   background-image: url('../images/Work/reforest.png');
-  background-size: 100% auto;
-  height: 500px;
 }
 
 .work-img-4-hidden {
   background-image: url('../images/Work/reforest.png');
-  background-size: 100% auto;
-  height: 500px;
 }
 
 .work-separator {
@@ -86,7 +51,16 @@
   background-color: #ffffff;
 }
 
-/* Responsive */
+
+/* Some Normal Padding */
+
+.work-content-right {
+  padding-right: 60px;
+}
+
+.work-content-left {
+  padding-left: 60px;
+}
 
 @media (max-width: 768px) {
   .work-content-right {
@@ -97,19 +71,4 @@
     padding: initial;
   }
 
-  .work-img-2 {
-    display: none;
-  }
-
-  .work-img-2-hidden {
-    display: block;
-  }
-
-  .work-img-4 {
-    display: none;
-  }
-
-  .work-img-4-hidden {
-    display: block;
-  }
 }

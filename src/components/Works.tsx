@@ -1,7 +1,33 @@
 import React, { Component } from 'react';
 import './Work.css';
 import Nav from '../Nav';
-import { Row, Col } from 'antd';
+import styled from 'styled-components';
+
+
+/* Styled Component */
+import {RowList, RowListItem} from '../styled-components/Style';
+
+
+/* Content */
+const WorkFirst = styled.div`
+  padding-top: 140px;
+  min-height: 500px;
+`;
+
+const WorkI = styled.div`
+  padding-top: 50px;
+  min-height: 500px;
+`;
+
+const WorkImage = styled.div`
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 500px;
+`;
+
+
 
 class Works extends Component {
   render() {
@@ -11,29 +37,29 @@ class Works extends Component {
           <Nav />
         </div>
 
-        <div className="work-content-1">
+        <WorkFirst>
           <div className="container container-2">
-            <Row className="row-list" >
-              <Col span={14} className="row-item-mobile-1" >
+            <RowList >
+              <RowListItem span={14} >
                 <div className="work-content-right" >
                   <h2>STARTUP COMMUNITY</h2>
                   <p>Since 2011, SmallWorld has remained focused on their vision of building a vibrant startup community in Phnom Penh through partnering with other area workspace groups to offer greater value and accessibility to early stage startup teams and entrepreneurs.</p>
                 </div>
-              </Col>
-              <Col span={10} className="row-item-mobile-1" >
-                <div className="work-img work-img-1"></div>
-              </Col>
-            </Row>
+              </RowListItem>
+              <RowListItem span={10} >
+                <WorkImage className="work-img-1"></WorkImage>
+              </RowListItem>
+            </RowList>
           </div>
-        </div>
+        </WorkFirst>
 
-        <div className="work-content">
+        <WorkI>
           <div className="container container-2">
-            <Row className="row-list">
-              <Col span={10} className="row-item-mobile-1" >
-                <div className="work-img work-img-2"></div>
-              </Col>
-              <Col span={14} className="row-item-mobile-1" >
+            <RowList>
+              <RowListItem span={10}>
+                <WorkImage className="work-img-2 isNotMobile"></WorkImage>
+              </RowListItem>
+              <RowListItem span={14} >
                 <div className="work-content-left" >
                   <h2>SEED EQUITY INVESTMENTS</h2>
                   <p>Seed Equity Investments are used to form equity investment partnerships which serve as the foundation for building a strong startup community.</p>
@@ -41,16 +67,16 @@ class Works extends Component {
                   <p>With a funding range between 5,000 to 25,000 USD per team, our Seed Equity Investments are not loans, but equity based investments.</p>
                   <p>Local co-investor equity participation is encouraged and generated through seminars and presentations within the greater Phnom Penh business community.</p>
                 </div>
-              </Col>
-            </Row>
-            <div className="work-img work-img-2-hidden"></div>
+              </RowListItem>
+            </RowList>
+            <WorkImage className="work-img-2-hidden isMobile"></WorkImage>
           </div>
-        </div>
+        </WorkI>
 
-        <div className="work-content">
+        <WorkI>
           <div className="container container-2">
-            <Row className="row-list">
-              <Col span={14} className="row-item-mobile-1" >
+            <RowList>
+              <RowListItem span={14} >
                 <div className="work-content-right" >
                   <h2>VENTURE BUILDING</h2>
                   <p>Our branded KOOMPI system is one among several exciting ventures in our portfolio.</p>
@@ -62,21 +88,21 @@ class Works extends Component {
                   <p>We&aposre engaged in both hardware and software R&D projects related to decentralized peer-to-peer applications, tokenization, robotics, artificial intelligence, and automation.</p>
                   <p>Beyond hardware and software, we&aposre building an all natural outdoor learning, living, work, and play environment using industrial hemp and bamboo design as the fundamental basis for production.</p>
                 </div>
-              </Col>
-              <Col span={10} className="row-item-mobile-1" >
-                <div className="work-img work-img-3"></div>
-              </Col>
-            </Row>
+              </RowListItem>
+              <RowListItem span={10} >
+                <WorkImage className="work-img-3"></WorkImage>
+              </RowListItem>
+            </RowList>
           </div>
-        </div>
+        </WorkI>
 
-        <div className="work-content">
+        <WorkI>
           <div className="container container-2">
-            <Row className="row-list">
-              <Col span={10} className="row-item-mobile-1" >
-                <div className="work-img work-img-4"></div>
-              </Col>
-              <Col span={14} className="row-item-mobile-1" >
+            <RowList>
+              <RowListItem span={10} >
+                <WorkImage className="work-img-4 isNotMobile"></WorkImage>
+              </RowListItem>
+              <RowListItem span={14} >
                 <div className="work-content-left" >
                   <h2>ENVIRONMENTAL STEWARDSHIP</h2>
                   <p>Environmental stewardship means the responsible use and protection of our natural resources through conservation and sustainable practice.</p>
@@ -85,11 +111,11 @@ class Works extends Component {
                   <p>At our VitaminAir project and the surrounding protected areas, we are directly engaged in small scale agriculture and reforestation, along with nature and wildlife preservation programs.</p>
                   <p>In addition, we are creating a hands-on learning, working and living environment with an appropriate balance among economic opportunity, environmental protection, and sustainable living practices.</p>
                 </div>
-              </Col>
-            </Row>
-            <div className="work-img work-img-4-hidden"></div>
+              </RowListItem>
+            </RowList>
+            <WorkImage className="work-img-4-hidden isMobile" ></WorkImage>
           </div>
-        </div>
+        </WorkI>
         
         <div className="work-separator" ></div>
       </div>
