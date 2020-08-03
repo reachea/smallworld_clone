@@ -1,71 +1,79 @@
 import React, { Component } from 'react';
-import './Space.css';
 import Nav from '../Nav';
 import { Row, Col } from 'antd';
-import GoogleMapReact from 'google-map-react';
 import styled from 'styled-components';
 
 
 /* Images */
-import Banner from '../images/space/smallworld_realty_banner.png';
-import ArrowDown from '../images/space/download-arrow.svg';
+  import Banner from '../images/space/smallworld_realty_banner.png';
+  import ArrowDown from '../images/space/download-arrow.svg';
+
+  /* Content III Images */
+  import SpaceImageI from '../images/space/realty1.jpg';
+  import SpaceImageII from '../images/space/realty5.jpg';
+  import SpaceImageIII from '../images/space/realty2.jpg';
+  import SpaceImageIV from '../images/space/realty3.jpg';
+  import SpaceImageV from '../images/space/boran4.jpg';
+  import SpaceImageVI from '../images/space/realty4.jpg';
+  import SpaceImageVII from '../images/space/boran1.jpg';
+  import SpaceImageVIII from '../images/space/boran3.jpg';
 
 
 
 /* Styled Components */
-import {UnclickableBtn, RowList, RowListItem,MapContent, MapList, MapItem, MapItemHidden} from '../styled-components/Style';
+import {SpaceNode, SpaceNavBar, ContainerIII, ContainerII, Container, UnclickableBtn, RowList, RowListItem,MapContent, MapList, MapItem, MapItemHidden} from '../styled-components/Style';
 
 
-  /* Content I */
+    /* Content I */
 
-  const SpaceI = styled.div`
-    padding-top: 130px;
-    min-height: 100vh;
-  `;
-
-  const SpaceIParagraph = styled.div`
-    h1 {
-      padding-top: 20px;
-      font-size: 37px !important;
-      text-align: left;
-    }
-
-    h2 {
-      color: #ec0a5a;
-    }
-  `;
-
-  const SpaceBannerI = styled.div`
-      height: 500px;
-      width: 100%;
-      background-image: url(${Banner});
-      background-position: top;
-      background-size: 100% auto;
-      background-repeat: no-repeat;
-  `;
-
-  const GoDownBtn = styled.div`
-      height: 100px;
-      width: 50px;
-      background-image: url(${ArrowDown});
-      background-position: center;
-      background-size: 60px 130px;
-      background-repeat: no-repeat;
-  `;
-
-  /* Content II */
-
-    const SpaceII = styled.div`
-      min-height: 200px;
-      margin-bottom: 30px;
+    const SpaceI = styled.div`
+      padding-top: 130px;
+      min-height: 100vh;
     `;
 
-    const SpaceIIContent = styled.div`
-      p {
-        font-size: 18px !important;
-        color: black;
+    const SpaceIParagraph = styled.div`
+      h1 {
+        padding-top: 20px;
+        font-size: 37px !important;
+        text-align: left;
+      }
+
+      h2 {
+        color: #ec0a5a;
       }
     `;
+
+    const SpaceBannerI = styled.div`
+        height: 500px;
+        width: 100%;
+        background-image: url(${Banner});
+        background-position: top;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    `;
+
+    const GoDownBtn = styled.div`
+        height: 100px;
+        width: 50px;
+        background-image: url(${ArrowDown});
+        background-position: center;
+        background-size: 60px 130px;
+        background-repeat: no-repeat;
+    `;
+
+    /* Content II */
+
+      const SpaceII = styled.div`
+        min-height: 200px;
+        margin-bottom: 30px;
+      `;
+
+      const SpaceIIContent = styled.div`
+        p {
+          font-size: 18px !important;
+          color: black;
+        }
+      `;
 
     /* Content III */
 
@@ -81,6 +89,43 @@ import {UnclickableBtn, RowList, RowListItem,MapContent, MapList, MapItem, MapIt
       background-size: 100% 200px;
     `;
 
+    const SpaceIIIListItemI = styled(SpaceIIIListItem)`
+      background-image: url(${SpaceImageI});
+    `;
+    
+    const SpaceIIIListItemII = styled(SpaceIIIListItem)`
+      background-image: url(${SpaceImageII});
+    `;
+
+    const SpaceIIIListItemIII = styled(SpaceIIIListItem)`
+      background-image: url(${SpaceImageIII});
+    `;
+
+    const SpaceIIIListItemIV = styled(SpaceIIIListItem)`
+      background-image: url(${SpaceImageIV});
+    `;
+
+    const SpaceIIIListItemV = styled(SpaceIIIListItem)`
+      background-image: url(${SpaceImageV});
+    `;
+
+    const SpaceIIIListItemVI = styled(SpaceIIIListItem)`
+      background-image: url(${SpaceImageVI});
+    `;
+
+    const SpaceIIIListItemVII = styled(SpaceIIIListItem)`
+      background-image: url(${SpaceImageVII});
+    `;
+
+    const SpaceIIIListItemVIII = styled(SpaceIIIListItem)`
+      background-image: url(${SpaceImageVIII});
+    `;
+
+  /* Extra */
+  
+  const Clear = styled.div`
+    height: 5px;
+  `;
 
 
 
@@ -89,13 +134,13 @@ import {UnclickableBtn, RowList, RowListItem,MapContent, MapList, MapItem, MapIt
 class Spaces extends Component {
   render() {
     return (
-      <div className="space" >
-        <div className="spaces-navbar" >
+      <SpaceNode >
+        <SpaceNavBar >
           <Nav />
-        </div>
+        </SpaceNavBar>
         
         <SpaceI>
-          <div className="container container-2 container-3" >
+          <ContainerIII >
             <RowList >
               <RowListItem span={10} >
                 <SpaceIParagraph >
@@ -118,12 +163,12 @@ class Spaces extends Component {
                 <SpaceBannerI></SpaceBannerI>
               </RowListItem>
             </RowList>
-          </div>
+          </ContainerIII>
         </SpaceI>
 
 
         <SpaceII>
-          <div className="container container-2 ">
+          <ContainerII>
             <RowList >
               <RowListItem span={6} >
                 <div id="space-about" >
@@ -138,46 +183,46 @@ class Spaces extends Component {
                 </SpaceIIContent>
               </RowListItem>
             </RowList>
-          </div>
+          </ContainerII>
         </SpaceII>
 
         <SpaceIII>
-          <div className="container">
+          <Container>
             <Row gutter={[8, 8]}>
               <Col className="gutter-row" span={8}>
-                <SpaceIIIListItem className=" space-item-1"></SpaceIIIListItem>
+                <SpaceIIIListItemI ></SpaceIIIListItemI>
               </Col>
               <Col className="gutter-row" span={8}>
-                <SpaceIIIListItem className=" space-item-2"></SpaceIIIListItem>
+                <SpaceIIIListItemII ></SpaceIIIListItemII>
               </Col>
               <Col className="gutter-row" span={4}>
-                <SpaceIIIListItem className=" space-item-3"></SpaceIIIListItem>
+                <SpaceIIIListItemIII ></SpaceIIIListItemIII>
               </Col>
               <Col className="gutter-row" span={4}>
-                <SpaceIIIListItem className=" space-item-4"></SpaceIIIListItem>
+                <SpaceIIIListItemIV ></SpaceIIIListItemIV>
               </Col>
             </Row>
-            <div className="clear"></div>
+            <Clear></Clear>
             <Row gutter={[8, 8]}>
               <Col className="gutter-row" span={7} >
-                <SpaceIIIListItem className=" space-item-5"></SpaceIIIListItem>
+                <SpaceIIIListItemV ></SpaceIIIListItemV>
               </Col>
               <Col className="gutter-row" span={3} >
-                <SpaceIIIListItem className=" space-item-6"></SpaceIIIListItem>
+                <SpaceIIIListItemVI ></SpaceIIIListItemVI>
               </Col>
               <Col className="gutter-row" span={7} >
-                <SpaceIIIListItem className=" space-item-7"></SpaceIIIListItem>
+                <SpaceIIIListItemVII ></SpaceIIIListItemVII>
               </Col>
               <Col className="gutter-row" span={7} >
-                <SpaceIIIListItem className=" space-item-8"></SpaceIIIListItem>
+                <SpaceIIIListItemVIII ></SpaceIIIListItemVIII>
               </Col>
             </Row>
-          </div>
+          </Container>
         </SpaceIII>
 
 
         <SpaceII>
-          <div className="container container-2">
+          <ContainerII>
             <RowList >
               <RowListItem span={6} >
                 <div>
@@ -192,12 +237,12 @@ class Spaces extends Component {
                 </SpaceIIContent>
               </RowListItem>
             </RowList>
-          </div>
+          </ContainerII>
         </SpaceII>
 
 
         <SpaceII>
-          <div className="container container-2">
+          <ContainerII>
             <RowList >
               <RowListItem span={6} >
                 <div>
@@ -210,12 +255,12 @@ class Spaces extends Component {
                 </SpaceIIContent>
               </RowListItem>
             </RowList>
-          </div>
+          </ContainerII>
         </SpaceII>
 
 
         <SpaceII>
-          <div className="container container-2">
+          <ContainerII>
             <RowList>
               <RowListItem span={6} >
                 <div>
@@ -228,7 +273,7 @@ class Spaces extends Component {
                 </SpaceIIContent>
               </RowListItem>
             </RowList>
-          </div>
+          </ContainerII>
         </SpaceII>
 
 
@@ -236,25 +281,16 @@ class Spaces extends Component {
             <MapList >
               <MapItemHidden span={5} >
               </MapItemHidden>
-              <MapItem span={7} className="paragraph-3" >
+              <MapItem span={7} style={{ minHeight: '400px' }} >
                 <h2>SmallWorld</h2>
                 <p>We look forward to welcome you at any working hour. Though, most of the time there are someone at SmallWorld. There are several startups in the same building, so make sure you know who you are looking for. We will surely direct you to the right person!</p>
                 <p>Look at the map, 2F-01, Raintree, #299 Preah Ang Duong, Sangkat Wat Phnom, Khan Daun Penh! Come walk around and feel it yourself.</p>
               </MapItem>
-              <Col span={12} >
-              <div style={{ height: '100%', width: '100%' }}>
-                <GoogleMapReact
-                  bootstrapURLKeys={{ key: "GOOGLE_API_KEY" }}
-                  defaultCenter={{ lat: 11.556374, lng: 104.928207 }}
-                  defaultZoom={10}
-                >
-                  {/* Marker */}
-                </GoogleMapReact>
-              </div>
-              </Col>
+              <MapItem span={12} >
+              </MapItem>
             </MapList>
           </MapContent>
-      </div>
+      </SpaceNode>
     );
   }
 }

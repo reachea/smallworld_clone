@@ -1,25 +1,152 @@
 import styled from "styled-components";
-import { Button, Row, Col } from 'antd';
+import { Button, Row, Col, Layout } from 'antd';
+
+const { Content } = Layout;
+
+/* Parent Node */
+
+  /* App Styled Components */
+
+  export const ContentNode = styled(Content)`
+    min-height: 100vh;
+  `;
+
+  export const AllContent = styled.div`
+    padding-top: 0px;
+    text-align: left;
+  `;
 
 
-export const LoadMoreBtn = styled.div`
+  /* Home Styled Components */
+  export const HomeNode = styled.div`
 
-  border: 1px solid transparent;
-  background-color: #94bbd4;
-  border-radius: 1.5em;
-  width: 170px;
-  height: 35px !important;
-  text-align: center;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
+    h1, h2, h3, h4 {
+      color: white;
+    }
 
-  p {
-    font-size: 16px !important;
-    color: #015e98;
-    padding-top: 2px;
-  }
-`;
+    p {
+      font-size: 20px!important;
+      color: #edecec;
+    }
+  `;
+
+
+
+  /* About Styled Components */
+  export const AboutNode = styled.div`
+  
+    h1, h2, h3, h4 {
+      color: #015e98;
+    }
+
+    h2 {
+      font-size: 28px !important;
+    }
+
+    p {
+      font-size: 20px !important;
+      color: #8e8b8c;
+    }
+  `;
+
+  export const AboutNavBar = styled.div`
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: #07568a;
+  `;
+
+
+  /* Works Styled Components */
+  export const WorkNode = styled.div`
+
+    h1, h2, h3, h4 {
+      color: #015e98;
+    }
+
+    h2 {
+      font-size: 28px !important;
+    }
+
+    p {
+      font-size: 20px !important;
+      color: #8e8b8c;
+    }
+  `;
+
+  export const WorkNavBar = styled.div`
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: #07568a;
+  `;
+
+
+  /* News Styled Components */
+  export const NewsNode = styled.div`
+  
+    h1, h2, h3, h4 {
+      color: #015e98;
+    }
+
+    p {
+      color: #9f9090;
+    }
+  `;
+
+  export const NewsNavBar = styled.div`
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: #07568a;
+  `;
+
+
+  /* Spaces Styled Components */
+  export const SpaceNode = styled.div`
+    
+    h1, h2, h3, h4 {
+      color: #015e98;
+    }
+
+    p {
+      color: #9f9090;
+    }
+  `;
+
+  export const SpaceNavBar = styled.div`
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: #07568a;
+  `;
+
+
+  /* Contact Styled Components */
+
+  export const ContactNode = styled.div`
+
+    h1, h2, h3, h4 {
+      color: #015e98;
+    }
+
+    h2 {
+      font-size: 23px;
+    }
+
+    p {
+      color: #9f9090;
+    }
+  `;
+
+  export const ContactNavBar = styled.div`
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: #07568a;
+  `;
+
+
 
 /* Responsive Row and RowItem */
 export const RowList = styled(Row)`
@@ -63,6 +190,7 @@ export const BlockListItemContent = styled.div`
   h3 {
     font-size: 18px !important;
     text-align: center;
+    color: #015e98;
   }
 
   p {
@@ -85,6 +213,26 @@ export const ImageItem = styled.div`
 
 
 /* Button Family */
+export const LoadMoreBtn = styled.div`
+
+  border: 1px solid transparent;
+  background-color: #94bbd4;
+  border-radius: 1.5em;
+  width: 170px;
+  height: 35px !important;
+  text-align: center;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  p {
+    font-size: 16px !important;
+    color: #015e98;
+    padding-top: 2px;
+  }
+`;
+
+
 export const HomeBtn = styled(Button)`
   min-height: 1em;
   height: 40px;
@@ -202,4 +350,70 @@ export const MapItemHidden = styled(Col)`
   @media (max-width: 1200px) {
     flex: initial;
   }
+`;
+
+
+/* Responsive Styled Components */
+
+export const Container = styled.div`
+
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+`;
+
+export const ContainerII = styled(Container)`
+
+
+  @media (max-width: 768px) {
+    margin-right: 0px;
+    margin-left: 0px;
+    max-width: 100%;
+  }
+`;
+
+export const ContainerIII = styled(ContainerII)`
+
+  @media (max-width: 992px) {
+    padding-left: 10%;
+  }
+`;
+
+export const ParagraphI = styled(Col)`
+
+  @media (max-width: 992px) {
+    flex: initial;
+    max-width: none;
+  }
+`;
+
+export const ParagraphII = styled(Col)`
+
+  @media (max-width: 768px) {
+    flex: initial;
+    max-width: none;
+  }
+`;
+
+export const ParagraphIII = styled(Col)`
+  
+  min-height: 400px;
 `;

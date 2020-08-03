@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import { Layout } from 'antd';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import FootNav from './FootNav';
@@ -13,21 +12,17 @@ import Works from './components/Works';
 import News from './components/News';
 import Spaces from './components/Spaces';
 
-const { Content } = Layout;
+// Styled Components
+import {ContentNode, AllContent} from './styled-components/Style';
 
-interface AppState {
-  path: any;
-}
-
-
-class App<T> extends React.Component< T , AppState> {
+class App<T> extends React.Component<T> {
 
   render() {
     return(
       <div className="App" >
         <Router>
-          <Content >
-            <div className="all-content">
+          <ContentNode >
+            <AllContent>
                 <Switch>
                   <Route path="/" exact component={Home} />
                   <Route path="/about" component={About} />
@@ -36,8 +31,8 @@ class App<T> extends React.Component< T , AppState> {
                   <Route path="/spaces" component={Spaces} />
                   <Route path="/contact" component={Contact} />
                 </Switch>
-            </div>
-          </Content>
+            </AllContent>
+          </ContentNode>
           <FootNav />
         </Router>
     </div>

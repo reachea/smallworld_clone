@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-import './Contact.css';
 import Nav from '../Nav';
 import { Row, Col } from 'antd';
-import GoogleMapReact from 'google-map-react';
 
 import { Form, Input } from 'antd';
 import styled from 'styled-components';
 
 
 /* Images */
+import FormLogoI from '../images/contact/address.png';
+import FormLogoII from '../images/contact/email.png';
+import FormLogoIII from '../images/contact/telegram.png';
+
 
 
 /* Styled Components */
-import {MapContent, MapList, MapItem, MapItemHidden, FormBtn} from '../styled-components/Style';
+import {ContactNavBar, ContactNode, ContainerII, MapContent, MapList, MapItem, MapItemHidden, FormBtn} from '../styled-components/Style';
 
 
   /* Content I */
   
-  const ContactI = styled.div`
+  const ContactI = styled(ContainerII)`
     padding-top: 140px;
   `;
 
@@ -41,6 +43,7 @@ import {MapContent, MapList, MapItem, MapItemHidden, FormBtn} from '../styled-co
     }
   `;
 
+
   const ContactLogoImage = styled.div`
     background-size: 100% auto;
     background-position: center;
@@ -52,6 +55,19 @@ import {MapContent, MapList, MapItem, MapItemHidden, FormBtn} from '../styled-co
       width: 70%;
     }
   `;
+
+  const ContactLogoImageI = styled(ContactLogoImage)`
+    background-image: url(${FormLogoI});
+  `;
+
+  const ContactLogoImageII = styled(ContactLogoImage)`
+    background-image: url(${FormLogoII});
+  `;
+
+  const ContactLogoImageIII = styled(ContactLogoImage)`
+    background-image: url(${FormLogoIII});
+  `;
+
 
   const ContactAddress = styled.div`
     font-size: 20px !important;
@@ -75,6 +91,10 @@ import {MapContent, MapList, MapItem, MapItemHidden, FormBtn} from '../styled-co
     background-color: #ececec;
     height: 200px;
     border-radius: 3px;
+  `;
+
+  const FormLabel = styled.span`
+    font-size: 12px;
   `;
 
 
@@ -101,32 +121,32 @@ class Contact<T> extends Component<T> {
     };
 
     return (
-      <div className="contact" >
-        <div className="contact-navbar" >
+      <ContactNode >
+        <ContactNavBar >
           <Nav />
-        </div>
+        </ContactNavBar>
 
 
-          <ContactI className="container container-2">
-            <ContactList className="contact-list" >
-              <ContactListItem span={12} className="left-content" >
+          <ContactI>
+            <ContactList>
+              <ContactListItem span={12} style= {{ paddingRight: '10px' }} >
                 <h2>Inquiries Request</h2>
                 <div>
                   <Form {...layout} name="basic" initialValues={{ remember: true }} onFinish={onFinish} onFinishFailed={onFinishFailed} className="contact-form" >
                     <label htmlFor="Username">
-                      <span className="form-label" >Full Name</span>
+                      <FormLabel >Full Name</FormLabel>
                     </label>
                     <Form.Item name="username" rules={[{ required: true, message: "Please input your username!" }]} className="form-username" >
                       <InputUsername />
                     </Form.Item>
                     <label htmlFor="Email">
-                      <span className="form-label" >Email</span>
+                      <FormLabel >Email</FormLabel>
                     </label>
                     <Form.Item name="email" rules={[{ required: true, message: "Please input your Email!" }]} className="form-email" >
                       <InputEmail />
                     </Form.Item>
                     <label htmlFor="Message">
-                      <span className="form-label" >Message</span>
+                      <FormLabel >Message</FormLabel>
                     </label>
                     <Form.Item name="message" className="form-message" >
                       <InputMessage />
@@ -139,13 +159,13 @@ class Contact<T> extends Component<T> {
                   </Form>
                 </div>
               </ContactListItem>
-              <ContactListItem span={12} className="right-content" >
+              <ContactListItem span={12} style={{ paddingLeft: '10px' }} >
                 <h2>Our Office</h2>
                 <Row>
                   <Col span={2}>
-                    <ContactLogoImage className="right-content-img-1" >
+                    <ContactLogoImageI >
 
-                    </ContactLogoImage>
+                    </ContactLogoImageI>
                   </Col>
                   <Col span={22}>
                     <a href="https://www.google.com/maps/place/KOOMPI+Boran+%26+Research+Lab/@11.5676517,104.9243105,17z/data=!3m1!4b1!4m5!3m4!
@@ -159,9 +179,9 @@ class Contact<T> extends Component<T> {
                 <br />
                 <Row>
                   <Col span={2}>
-                    <ContactLogoImage className="right-content-img-2" >
+                    <ContactLogoImageII >
 
-                    </ContactLogoImage>
+                    </ContactLogoImageII>
                   </Col>
                   <Col span={22}>
                     <a href="https://smallworldventure@gmail.com" target="_blank" rel="noopener noreferrer" >
@@ -174,9 +194,9 @@ class Contact<T> extends Component<T> {
                 <br />
                 <Row>
                   <Col span={2}>
-                    <ContactLogoImage className="right-content-img-3" >
+                    <ContactLogoImageIII >
 
-                    </ContactLogoImage>
+                    </ContactLogoImageIII>
                   </Col>
                   <Col span={22}>
                     <a href="https://t.me/smallworldventure" target="_blank" rel="noopener noreferrer" >
@@ -195,25 +215,16 @@ class Contact<T> extends Component<T> {
             <MapList >
               <MapItemHidden span={5} >
               </MapItemHidden>
-              <MapItem span={7} className=" paragraph-3" >
+              <MapItem span={7} style={{ minHeight: '400px' }} >
                 <h2>SmallWorld</h2>
                 <p>We look forward to welcome you at any working hour. Though, most of the time there are someone at SmallWorld. There are several startups in the same building, so make sure you know who you are looking for. We will surely direct you to the right person!</p>
                 <p>Look at the map, 2F-01, Raintree, #299 Preah Ang Duong, Sangkat Wat Phnom, Khan Daun Penh! Come walk around and feel it yourself.</p>
               </MapItem>
               <MapItem span={12} >
-              <div style={{ height: '100%', width: '100%' }}>
-                <GoogleMapReact
-                  bootstrapURLKeys={{ key: "GOOGLE_API_KEY" }}
-                  defaultCenter={{ lat: 11.556374, lng: 104.928207 }}
-                  defaultZoom={10}
-                >
-                  {/* Marker */}
-                </GoogleMapReact>
-              </div>
               </MapItem>
             </MapList>
           </MapContent>
-      </div>
+      </ContactNode>
     );
   }
 }
