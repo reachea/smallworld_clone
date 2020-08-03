@@ -24,12 +24,15 @@ const { Content } = Layout;
       color: white;
     }
 
+    h2 {
+      font-size: 28px !important;
+    }
+
     p {
       font-size: 20px!important;
       color: #edecec;
     }
   `;
-
 
 
   /* About Styled Components */

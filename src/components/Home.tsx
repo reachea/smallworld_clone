@@ -35,6 +35,10 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
       padding-top: 40px;
       min-height: 50vw!important;
 
+      h1 {
+        font-size: 28px !important;
+      }
+
       @media (max-width: 992px) {
         padding-bottom: 50px;
       }
@@ -88,6 +92,10 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
       background-position: top;
       background-repeat: no-repeat;
 
+      h2 {
+        font-size: 22px !important;
+      }
+
       /* Responsive Mobile */
       @media (max-width: 768px) {
         min-height: initial;
@@ -119,6 +127,7 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
       h2 {
         text-align: center;
         color: #015e98;
+        font-size: 24px;
       }
 
       p {
@@ -144,6 +153,10 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
     `;
 
     const HomeBannerIIIContent = styled.div`
+      h1 {
+        font-size: 30px !important;
+        font-weight: 700;
+      }
 
       p {
         font-size: 19px !important;

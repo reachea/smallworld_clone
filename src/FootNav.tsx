@@ -1,22 +1,83 @@
 import React, { Component } from 'react';
 import { Layout, Button, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
-import './FootNav.css';
+import styled from 'styled-components';
+
+/* Images */
+import FootLogo from './images/logo/Logo_SW_Gray.png';
+
+import FootTelegram from './images/socialMedia/telegram.svg';
+import FootFacebook from './images/socialMedia/facebook.svg';
+import FootTwitter from './images/socialMedia/twitter.svg';
+
+
+/* Styled Components */
+import { Container } from './styled-components/Style';
 
 const { Footer } = Layout;
+
+  /* Some Styled Content */
+  const FootNavBar = styled(Container)`
+    min-height: 355px;
+  `;
+
+  const FooterNav = styled.div`
+    padding-top: 4% !important;
+  `;
+
+  const FooterNavButton = styled(Button)`
+    height: 45px;
+  `;
+
+  const FooterNavSpan = styled.span`
+    color: #8e8b8c;
+    font-size: 20px !important;
+  `;
+
+  const FooterLogo = styled.div`
+    height: 100px;
+    background-image: url(${FootLogo});
+    background-size: 100% auto;
+    background-position: right;
+    background-repeat: no-repeat;
+  `;
+
+  const FooterImage = styled.div`
+    background-size: 32px;
+    background-position: left;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50px;
+    padding-left: 35px;
+  `;
+
+  const FooterTelegram = styled(FooterImage)`
+    background-image: url(${FootTelegram});
+  `;
+
+  const FooterFacebook = styled(FooterImage)`
+    background-image: url(${FootFacebook});
+  `;
+
+  const Footertwiiter = styled(FooterImage)`
+    background-image: url(${FootTwitter});
+  `;
+
+
+
 
 class FootNav extends Component {
   render() {
     return (
       <div>
         <Footer>
-          <div className="footNavBar container">
-            <div className="footer" >
+          <FootNavBar>
+            <FooterNav >
               <Row>
                 <Col span={6} >
                     <Link to="/about">
                       <Button type="link" className="foot-nav" >
-                        <span className="span-footer-1" >About</span>
+                        <FooterNavSpan >About</FooterNavSpan>
                       </Button>
                     </Link>
                 </Col>
@@ -24,60 +85,60 @@ class FootNav extends Component {
                 <Col span={7} ></Col>
                 <Col span={4} >
                   <a href="https://t.me/smallworldventure" target="_blank" rel="noopener noreferrer">
-                    <div className="telegram-foot" >
-                      <Button type="link" className="foot-nav" >
-                        <span className="span-footer-1" >Telegram</span>
-                      </Button>
-                    </div>
+                    <FooterTelegram >
+                      <FooterNavButton type="link" >
+                        <FooterNavSpan >Telegram</FooterNavSpan>
+                      </FooterNavButton>
+                    </FooterTelegram>
                   </a>
                 </Col>
               </Row>
               <Row>
                 <Col span={6} >
                     <Link to="/works">
-                      <Button type="link" className="foot-nav" >
-                        <span className="span-footer-1" >Works</span>
-                      </Button>
+                      <FooterNavButton type="link" >
+                        <FooterNavSpan >Works</FooterNavSpan>
+                      </FooterNavButton>
                     </Link>
                 </Col>
                 <Col span={7} ></Col>
                 <Col span={7} ></Col>
                 <Col span={4} >
                   <a href="https://www.facebook.com/smallworldventure/" target="_blank" rel="noopener noreferrer">
-                    <div className="facebook-foot" >
-                      <Button type="link" className="foot-nav" >
-                        <span className="span-footer-1" >Facebook</span>
-                      </Button>
-                    </div>
+                    <FooterFacebook >
+                      <FooterNavButton type="link" >
+                        <FooterNavSpan >Facebook</FooterNavSpan>
+                      </FooterNavButton>
+                    </FooterFacebook>
                   </a>
                 </Col>
               </Row>
               <Row>
                 <Col span={6} >
                     <Link to="/news">
-                      <Button type="link" className="foot-nav" >
-                        <span className="span-footer-1" >News</span>
-                      </Button>
+                      <FooterNavButton type="link" >
+                        <FooterNavSpan >News</FooterNavSpan>
+                      </FooterNavButton>
                     </Link>
                 </Col>
                 <Col span={7} ></Col>
                 <Col span={7} ></Col>
                 <Col span={4} >
                   <a href="https://twitter.com/smallworldvc" target="_blank" rel="noopener noreferrer">
-                    <div className="twitter-foot" >
-                      <Button type="link" className="foot-nav" >
-                        <span className="span-footer-1" >twitter</span>
-                      </Button>
-                    </div>
+                    <Footertwiiter >
+                      <FooterNavButton type="link" >
+                        <FooterNavSpan >twitter</FooterNavSpan>
+                      </FooterNavButton>
+                    </Footertwiiter>
                   </a>
                 </Col>
               </Row>
               <Row>
                 <Col span={6} >
                     <Link to="/contact">
-                      <Button type="link" className="foot-nav" >
-                        <span className="span-footer-1" >Contact</span>
-                      </Button>
+                      <FooterNavButton type="link" >
+                        <FooterNavSpan >Contact</FooterNavSpan>
+                      </FooterNavButton>
                     </Link>
                 </Col>
                 <Col span={6} ></Col>
@@ -90,11 +151,11 @@ class FootNav extends Component {
                 <Col span={5} ></Col>
                 <Col span={5} ></Col>
                 <Col span={4} >
-                  <div className="footer-logo" ></div>
+                  <FooterLogo ></FooterLogo>
                 </Col>
               </Row>
-            </div>
-          </div>
+            </FooterNav>
+          </FootNavBar>
         </Footer>
       </div>
     );
