@@ -4,6 +4,8 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 import Nav from '../Nav';
 
+import { withTranslation, WithTranslation } from 'react-i18next';
+
 /* Images */
 import Banner from "../images/banner.png";
 import BannerII from "../images/banner-2.png";
@@ -33,7 +35,7 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
     const HomeNavBar = styled(Container)`
       width: 100%;
       padding-top: 40px;
-      min-height: 50vw!important;
+      min-height: 45vw!important;
 
       h1 {
         font-size: 28px !important;
@@ -222,10 +224,10 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
     `;
 
 
-class Home extends Component {
+class Home extends Component<WithTranslation> {
 
   render() {
-    
+
     return (
       <HomeNode>
         <HomeI>
@@ -409,4 +411,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default withTranslation()(Home);

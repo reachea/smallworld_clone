@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import styled from 'styled-components';
+
+import { withTranslation, WithTranslation } from 'react-i18next';
 
 import FootNav from './FootNav';
 
@@ -14,11 +17,17 @@ import Spaces from './components/Spaces';
 // Styled Components
 import {ContentNode, AllContent} from './styled-components/Style';
 
-class App<T> extends React.Component<T> {
+const AppNode = styled.div`
+  font-family: sans-serif;
+`;
+
+
+class App extends React.Component<WithTranslation> {
 
   render() {
+
     return(
-      <div className="App" >
+      <AppNode style={{ fontFamily: "Quicksand"  }} >
         <Router>
           <ContentNode >
             <AllContent>
@@ -34,9 +43,9 @@ class App<T> extends React.Component<T> {
           </ContentNode>
           <FootNav />
         </Router>
-    </div>
+    </AppNode>
     );
   }
 }
 
-export default App;
+export default withTranslation()(App);

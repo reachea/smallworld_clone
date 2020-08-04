@@ -1,0 +1,14 @@
+{
+  "Font" : {
+    "src": "Kantumruy",
+    "isEN": false
+  },
+
+  "NavBar" : {
+    "About": "អំពី",
+    "Works": "ការងារ",
+    "News": "ព័ត៌មាន",
+    "Spaces": "ទីកន្លែង",
+    "Contact": "ទាក់ទង"
+  }
+}

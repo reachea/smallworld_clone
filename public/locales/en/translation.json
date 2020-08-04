@@ -1,0 +1,14 @@
+{
+  "Font" : {
+    "src": "Quicksand",
+    "isEN": true
+  },
+
+  "NavBar" : {
+    "About": "About",
+    "Works": "Works",
+    "News": "News",
+    "Spaces": "Spaces",
+    "Contact": "Contact"
+  }
+}

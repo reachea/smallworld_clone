@@ -3,9 +3,15 @@ import { Layout, Menu, Button} from 'antd';
 import { NavLink } from 'react-router-dom';
 import { MenuOutlined, CloseOutlined } from '@ant-design/icons'
 import styled from 'styled-components';
+import { withTranslation, WithTranslation } from 'react-i18next';
+
+import i18n from './i18next';
 
 /* Image */
 import Logo from './images/logo/sw-green.png';
+
+import CambodiaFlag from './images/flag/cambodia-flag.jpg';
+import UnitedKingdomFlag from './images/flag/english-flag.jpg';
 
 
 /* Styled Components */
@@ -49,7 +55,6 @@ const { Header } = Layout;
         background-color: rgba(1,94,152,.56);
         position: fixed;
         top: 0px;
-        left: -100vh;
         width: 100%;
         height: 100vh;
         cursor: pointer;
@@ -96,6 +101,7 @@ const { Header } = Layout;
         width: 60%;
         height: 100vh;
         top: 0px;
+        left: 0px;
         transition: .5s !important;
         background-color: white;
         z-index: 10;
@@ -145,24 +151,59 @@ const { Header } = Layout;
       }
     `;
 
+  /* Component for Translation */
+      /* Khmer Flag */
 
+      const KhmerFlag = styled.div`
+        display: inline-block;
+        width: 35px;
+        height: 20px;
+        cursor: pointer;
+        background-image: url(${CambodiaFlag});
+        background-size: 100% auto;
+        background-repeat: no-repeat;
 
+        :hover {
+          box-shadow: 0 0 40px 5px hsla(0,0%,77.3%,.85);
+          transform: translateY(2px);
+          transition: .5s !important;
+        }
+      `;
+
+      const EnglishFlag = styled.div`
+        display: inline-block;
+        width: 35px;
+        height: 20px;
+        cursor: pointer;
+        background-image: url(${UnitedKingdomFlag});
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+
+        :hover {
+          box-shadow: 0 0 40px 5px hsla(0,0%,77.3%,.85);
+          transform: translateY(2px);
+          transition: .5s !important;
+        }
+      `;
 
 
 interface NavState {
   navMenuOpen: boolean;
 }
 
-class Nav<T> extends Component<T, NavState> {
+class Nav extends Component<WithTranslation, NavState> {
 
   protected hideNav: boolean;
+  protected isEN: boolean;
 
-  constructor(props: T) {
+  constructor(props: any) {
     super(props);
     this.state = { navMenuOpen: false };
     this.hideNav = false;
+    this.isEN = false;
 
-    this.menuClick = this.menuClick.bind(this)
+    this.menuClick = this.menuClick.bind(this);
+    this.handleLanguage = this.handleLanguage.bind(this);
   }
 
   menuClick = () => {
@@ -170,9 +211,18 @@ class Nav<T> extends Component<T, NavState> {
     this.hideNav = !this.hideNav;
   }
 
+  handleLanguage = (lang: any) => {
+    i18n.changeLanguage(lang);
+
+    this.isEN = !this.isEN;
+  }
+
   render() {
+
+    const { t } = this.props;
+
     return (
-      <NavHeader>
+      <NavHeader  style={{ fontFamily: t('Font.src') }}>
         <Container >
           <NavLink to="/" >
             <NavLogo />
@@ -183,17 +233,19 @@ class Nav<T> extends Component<T, NavState> {
 
           <NavMobileBackground onClick={this.menuClick} style={{ left: `${this.hideNav? "0px" : "-100vw"}` }} ></NavMobileBackground>
 
-          <NavMenu style={{ left: `${this.hideNav? "0px" : "-100vw"}` }} >
-            <NavMenuItem key="1"  ><NavLinkItem to="/about" >About</NavLinkItem></NavMenuItem>
-            <NavMenuItem key="2"  ><NavLinkItem to="/works" >Works</NavLinkItem></NavMenuItem>
-            <NavMenuItem key="3"  ><NavLinkItem to="/news" >News</NavLinkItem></NavMenuItem>
-            <NavMenuItem key="4"  ><NavLinkItem to="/spaces" >Spaces</NavLinkItem></NavMenuItem>
-            <NavMenuItem key="5"  ><NavLinkItem to="/contact" >Contact</NavLinkItem></NavMenuItem>
+          <NavMenu style={{ left: `${this.hideNav? "0px" : "-100vw" }` }} >
+            <NavMenuItem key="1"  ><NavLinkItem to="/about" >{t('NavBar.About')}</NavLinkItem></NavMenuItem>
+            <NavMenuItem key="2"  ><NavLinkItem to="/works" >{t('NavBar.Works')}</NavLinkItem></NavMenuItem>
+            <NavMenuItem key="3"  ><NavLinkItem to="/news" >{t('NavBar.News')}</NavLinkItem></NavMenuItem>
+            <NavMenuItem key="4"  ><NavLinkItem to="/spaces" >{t('NavBar.Spaces')}</NavLinkItem></NavMenuItem>
+            <NavMenuItem key="5"  ><NavLinkItem to="/contact" >{t('NavBar.Contact')}</NavLinkItem></NavMenuItem>
+            <NavMenuItem >{t('Font.isEN')? <KhmerFlag onClick={() => this.handleLanguage('kh')} ></KhmerFlag> : <EnglishFlag onClick={() => this.handleLanguage('en')} ></EnglishFlag> }</NavMenuItem>
           </NavMenu>
+
         </Container>
     </NavHeader>
     );
   }
 }
 
-export default Nav;
+export default withTranslation()(Nav);
