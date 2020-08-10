@@ -37,6 +37,14 @@ import { AboutNode, AboutNavBar, RowList, ContainerII, ParagraphII } from '../st
 
   const AboutContentHeader = styled(ContainerII)`
     text-align: center;
+
+    h2 {
+      color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
+    }
+
+    p {
+      color: ${props => props.theme.mode === 'dark'? 'white' : '#979a9a'};
+    }
   `;
 
 
@@ -74,6 +82,14 @@ import { AboutNode, AboutNavBar, RowList, ContainerII, ParagraphII } from '../st
     margin-top: 100px;
     padding-left: 10px;
     padding-right: 10px;
+    
+    h2 {
+      color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
+    }
+
+    p {
+      color: ${props => props.theme.mode === 'dark'? 'white' : '#979a9a'};
+    }
 
     /* Mobile Responsive */
     @media (max-width: 768px) {
@@ -134,6 +150,14 @@ import { AboutNode, AboutNavBar, RowList, ContainerII, ParagraphII } from '../st
     padding-top: 120px;
     width: 100%;
     height: 100%;
+
+    h2 {
+      color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
+    }
+
+    p {
+      color: ${props => props.theme.mode === 'dark'? 'white' : '#979a9a'};
+    }
 
     @media (max-width: 768px) {
       h2 {
@@ -205,7 +229,7 @@ import { AboutNode, AboutNavBar, RowList, ContainerII, ParagraphII } from '../st
     const AboutIII = styled.div`
       min-height: 650px;
       padding-top: 100px;
-      background-color: #f0f1f3;
+      background-color: ${props => props.theme.mode === 'dark'? '#15395b' : '#f0f1f3'};
     `;
 
     const AboutIIIRowList = styled(RowList)`
@@ -234,10 +258,12 @@ import { AboutNode, AboutNavBar, RowList, ContainerII, ParagraphII } from '../st
 
       h3 {
         font-size: 18px !important;
+        color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
       }
 
       p {
         font-size: 17px !important;
+        color: ${props => props.theme.mode === 'dark'? 'white' : '#979a9a'};
       }
     `;
 

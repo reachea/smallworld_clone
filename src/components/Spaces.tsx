@@ -36,10 +36,11 @@ import {SpaceNode, SpaceNavBar, ContainerIII, ContainerII, Container, Unclickabl
         padding-top: 20px;
         font-size: 37px !important;
         text-align: left;
+        color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
       }
 
       h2 {
-        color: #ec0a5a;
+        color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
       }
     `;
 
@@ -68,10 +69,16 @@ import {SpaceNode, SpaceNavBar, ContainerIII, ContainerII, Container, Unclickabl
         margin-bottom: 30px;
       `;
 
+      const SpaceItemTitle = styled.div`
+        h1 {
+          color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
+        }
+      `;
+
       const SpaceIIContent = styled.div`
         p {
           font-size: 18px !important;
-          color: black;
+          color: ${props => props.theme.mode === 'dark'? 'white' : 'black'};
         }
       `;
 
@@ -171,9 +178,9 @@ class Spaces extends Component {
           <ContainerII>
             <RowList >
               <RowListItem span={6} >
-                <div id="space-about" >
+                <SpaceItemTitle id="space-about" >
                   <h1>About</h1>
-                </div>
+                </SpaceItemTitle>
               </RowListItem>
               <RowListItem span={18} >
                 <SpaceIIContent>
@@ -225,9 +232,9 @@ class Spaces extends Component {
           <ContainerII>
             <RowList >
               <RowListItem span={6} >
-                <div>
+                <SpaceItemTitle>
                   <h1>Why SmallWorld Realty?</h1>
-                </div>
+                </SpaceItemTitle>
               </RowListItem>
               <RowListItem span={18} >
                 <SpaceIIContent>
@@ -245,9 +252,9 @@ class Spaces extends Component {
           <ContainerII>
             <RowList >
               <RowListItem span={6} >
-                <div>
+                <SpaceItemTitle>
                   <h1>SmallWorld Raintree</h1>
-                </div>
+                </SpaceItemTitle>
               </RowListItem>
               <RowListItem span={18} >
                 <SpaceIIContent>
@@ -263,9 +270,9 @@ class Spaces extends Component {
           <ContainerII>
             <RowList>
               <RowListItem span={6} >
-                <div>
+                <SpaceItemTitle>
                   <h1>SmallWorld Pteas Boran</h1>
-                </div>
+                </SpaceItemTitle>
               </RowListItem>
               <RowListItem span={18} >
                 <SpaceIIContent>

@@ -11,6 +11,10 @@ import FormLogoI from '../images/contact/address.png';
 import FormLogoII from '../images/contact/email.png';
 import FormLogoIII from '../images/contact/telegram.png';
 
+import FormLogoIDark from '../images/nightmode/contact/address.png';
+import FormLogoIIDark from '../images/nightmode/contact/email.png';
+import FormLogoIIIDark from '../images/nightmode/contact/telegram.png';
+
 
 
 /* Styled Components */
@@ -35,6 +39,10 @@ import {ContactNavBar, ContactNode, ContainerII, MapContent, MapList, MapItem, M
 
   const ContactListItem = styled(Col)`
 
+    h2 {
+      color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
+    }
+
     @media (max-width: 768px) {
       display: block;
       max-width: none;
@@ -57,22 +65,22 @@ import {ContactNavBar, ContactNode, ContainerII, MapContent, MapList, MapItem, M
   `;
 
   const ContactLogoImageI = styled(ContactLogoImage)`
-    background-image: url(${FormLogoI});
+    background-image: url(${props => props.theme.mode === 'dark'? FormLogoIDark : FormLogoI});
   `;
 
   const ContactLogoImageII = styled(ContactLogoImage)`
-    background-image: url(${FormLogoII});
+    background-image: url(${props => props.theme.mode === 'dark'? FormLogoIIDark : FormLogoII});
   `;
 
   const ContactLogoImageIII = styled(ContactLogoImage)`
-    background-image: url(${FormLogoIII});
+    background-image: url(${props => props.theme.mode === 'dark'? FormLogoIIIDark : FormLogoIII});
   `;
 
 
   const ContactAddress = styled.div`
     font-size: 20px !important;
     padding-left: 30px;
-    color: #9f9090;
+    color: ${props => props.theme.mode === 'dark'? '#eaeff2' : '#9f9090'};
   `;
 
   const InputUsername = styled(Input)`
@@ -95,6 +103,7 @@ import {ContactNavBar, ContactNode, ContainerII, MapContent, MapList, MapItem, M
 
   const FormLabel = styled.span`
     font-size: 12px;
+    color: ${props => props.theme.mode === 'dark'? 'white' : 'black'};
   `;
 
 

@@ -176,7 +176,8 @@ export const RowListItem = styled(Col)`
 
 export const BlockListItem = styled.div`
   border-radius: 3px;
-  box-shadow: 0 0 40px 0 hsla(0,0%,77.3%,.85);
+  box-shadow: ${props => props.theme.mode === 'dark'? '0 0 40px 0 hsla(0,0%,27.3%,.85)' : '0 0 40px 0 hsla(0,0%,77.3%,.85)'};
+  background-color: ${props => props.theme.mode === 'dark'? '#164c7e' : 'white'};
 
   :hover {
     transition: .3s;
@@ -187,19 +188,19 @@ export const BlockListItem = styled.div`
 export const BlockListItemContent = styled.div`
   min-height: 200px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: ${props => props.theme.mode === 'dark'? '#164c7e' : 'white'};
   padding: 5px 10px 5px 10px;
 
   h3 {
     font-size: 18px !important;
     text-align: center;
-    color: #015e98;
+    color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
   }
 
   p {
     text-align: left;
     font-size: 15px !important;
-    color: #616161;
+    color: ${props => props.theme.mode === 'dark'? 'white' : '#979a9a'};
   }
 `;
 
@@ -242,7 +243,7 @@ export const HomeBtn = styled(Button)`
   width: 171px;
   background-color: white;
   border-color: transparent;
-  color: #015e98;
+  color: ${props => props.theme.mode === 'dark'? 'black' : '#015e98'};
   border-radius: 1.5em;
 
   :hover {
@@ -263,7 +264,7 @@ export const ImageBtn = styled.div`
 
   p {
     font-size: 12px !important;
-    color: #015e98;
+    color: ${props => props.theme.mode === 'dark'? 'black' : '#979a9a'};
     text-align: center;
   }
 `;

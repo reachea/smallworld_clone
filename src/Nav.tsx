@@ -194,13 +194,11 @@ interface NavState {
 class Nav extends Component<WithTranslation, NavState> {
 
   protected hideNav: boolean;
-  protected isEN: boolean;
 
   constructor(props: any) {
     super(props);
     this.state = { navMenuOpen: false };
     this.hideNav = false;
-    this.isEN = false;
 
     this.menuClick = this.menuClick.bind(this);
     this.handleLanguage = this.handleLanguage.bind(this);
@@ -213,8 +211,6 @@ class Nav extends Component<WithTranslation, NavState> {
 
   handleLanguage = (lang: any) => {
     i18n.changeLanguage(lang);
-
-    this.isEN = !this.isEN;
   }
 
   render() {
@@ -239,7 +235,7 @@ class Nav extends Component<WithTranslation, NavState> {
             <NavMenuItem key="3"  ><NavLinkItem to="/news" >{t('NavBar.News')}</NavLinkItem></NavMenuItem>
             <NavMenuItem key="4"  ><NavLinkItem to="/spaces" >{t('NavBar.Spaces')}</NavLinkItem></NavMenuItem>
             <NavMenuItem key="5"  ><NavLinkItem to="/contact" >{t('NavBar.Contact')}</NavLinkItem></NavMenuItem>
-            <NavMenuItem >{t('Font.isEN')? <KhmerFlag onClick={() => this.handleLanguage('kh')} ></KhmerFlag> : <EnglishFlag onClick={() => this.handleLanguage('en')} ></EnglishFlag> }</NavMenuItem>
+            <NavMenuItem >{t('Font.isKH')? <EnglishFlag onClick={() => this.handleLanguage('en')} ></EnglishFlag> : <KhmerFlag onClick={() => this.handleLanguage('kh')} ></KhmerFlag>  }</NavMenuItem>
           </NavMenu>
 
         </Container>

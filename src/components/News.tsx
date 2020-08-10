@@ -30,6 +30,7 @@ import {NewsNode, NewsNavBar, ContainerII, RowList, RowListItem, BlockListItem, 
       margin: 50px 0px;
       font-size: 25px !important;
       text-align: center;
+      color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
     }
   `;
 
@@ -54,6 +55,7 @@ import {NewsNode, NewsNavBar, ContainerII, RowList, RowListItem, BlockListItem, 
       margin: 50px 0px;
       font-size: 25px !important;
       text-align: center;
+      color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
     }
   `;
 
@@ -74,7 +76,7 @@ import {NewsNode, NewsNavBar, ContainerII, RowList, RowListItem, BlockListItem, 
   const NewSeparator = styled.div`
     height: 100px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: ${props => props.theme.mode === 'dark'? '#112a45' : '#ffffff'};
   `;
   
 

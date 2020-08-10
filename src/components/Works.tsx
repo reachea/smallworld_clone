@@ -15,7 +15,7 @@ import styled from 'styled-components';
 import {WorkNode, WorkNavBar, ContainerII, RowList, RowListItem} from '../styled-components/Style';
 
 
-/* Content */
+/* Content I */
 const WorkFirst = styled.div`
   padding-top: 140px;
   min-height: 500px;
@@ -38,6 +38,8 @@ const WorkImageI = styled(WorkImage)`
   background-image: url(${ImageI});
 `;
 
+/* Content II */
+
 const WorkImageIIisMobile = styled(WorkImage)`
   background-image: url(${ImageII});
 
@@ -58,9 +60,13 @@ const WorkImageIIisNotMobile = styled(WorkImage)`
   }
 `;
 
+/* Content III */
+
 const WorkImageIII = styled(WorkImage)`
   background-image: url(${ImageIII});
 `;
+
+/* Content IV */
 
 const WorkImageIVisMobile = styled(WorkImage)`
   background-image: url(${ImageIV});
@@ -91,6 +97,14 @@ const WorkImageIVisNotMobile = styled(WorkImage)`
   
     padding-right: 60px;
 
+    h2 {
+      color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
+    }
+
+    p {
+      color: ${props => props.theme.mode === 'dark'? 'white' : '#979a9a'};
+    }
+
     @media (max-width: 768px) {
       padding: initial;
     }
@@ -99,6 +113,14 @@ const WorkImageIVisNotMobile = styled(WorkImage)`
   const WorkContentLeft = styled.div`
   
     padding-left: 60px;
+
+    h2 {
+      color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
+    }
+
+    p {
+      color: ${props => props.theme.mode === 'dark'? 'white' : '#979a9a'};
+    }
 
     @media (max-width: 768px) {
       padding: initial;
@@ -110,7 +132,7 @@ const WorkImageIVisNotMobile = styled(WorkImage)`
   const WorkSeparator = styled.div`
     height: 100px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: ${props => props.theme.mode === 'dark'? '#112a45' : '#ffffff'};
   `;
 
 

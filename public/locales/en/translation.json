@@ -1,7 +1,7 @@
 {
   "Font" : {
     "src": "Quicksand",
-    "isEN": true
+    "isKH": false
   },
 
   "NavBar" : {

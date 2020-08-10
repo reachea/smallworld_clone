@@ -8,7 +8,9 @@ import { withTranslation, WithTranslation } from 'react-i18next';
 
 /* Images */
 import Banner from "../images/banner.png";
+import BannerDark from '../images/nightmode/banner.png';
 import BannerII from "../images/banner-2.png";
+import BannerIINight from "../images/nightmode/banner-2.png";
 
   /* Content II */
   import ImageIContentII from '../images/blurb-1.png';
@@ -36,9 +38,11 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
       width: 100%;
       padding-top: 40px;
       min-height: 45vw!important;
+      padding-bottom: 50px;
 
       h1 {
         font-size: 28px !important;
+        font-weight: 500;
       }
 
       @media (max-width: 992px) {
@@ -53,7 +57,7 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
     `;
 
     const HomeI = styled.div`
-      background-image: url(${Banner});
+      background-image: url(${props => props.theme.mode === 'dark'? BannerDark : Banner});
       background-position: bottom;
       background-size: inherit;
       min-height: 50vw!important;
@@ -62,7 +66,7 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
       /* Extra large devices (large desktops, 1200px and up) */
       @media (max-width: 1400px) {
         background-image: none;
-        background-color: #053f64;
+        background-color: ${ props => props.theme.mode === 'dark'? '#164c7e' : '#053f64' };
         background-position: bottom;
         background-size: inherit;
         min-height: 50vw!important;
@@ -83,12 +87,11 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
   /* Content II */
     const HomeII = styled.div`
       min-height: 603px;
-      background-color: #f5f5f5;
       padding-bottom: 50px;
     `;
 
     const HomeIIList = styled.div`
-      background-color: #ebebeb;
+      background-color: ${props => props.theme.mode === 'dark'? '#053f64' : '#f0f2f5' };
       min-height: 500px;
       flex-grow: 1;
       background-position: top;
@@ -128,12 +131,12 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
 
       h2 {
         text-align: center;
-        color: #015e98;
+        color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'};
         font-size: 24px;
       }
 
       p {
-        color: #979a9a;
+        color: ${props => props.theme.mode === 'dark'? 'white' : '#979a9a'};
         text-align: left;
         font-size: 18px !important;
         line-height: 25px;
@@ -144,7 +147,7 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
   /* Content III */
     const HomeIII = styled.div`
       min-height: 530px;
-      background-image: url(${BannerII});
+      background-image: url(${props => props.theme.mode === 'dark'? BannerIINight : BannerII});
       background-size: cover;
       background-position: 50%;
       background-repeat: no-repeat;
@@ -176,7 +179,7 @@ import { HomeNode, Container, ContainerII, ParagraphI, ParagraphII, HomeBtn, Row
         margin: 50px 0px;
         font-size: 25px !important;
         text-align: center;
-        color: #015e98;
+        color: ${props => props.theme.mode === 'dark'? '#b7e3fa' : '#015e98'}
       }
     `;
 
@@ -406,6 +409,7 @@ class Home extends Component<WithTranslation> {
             </RowList>
           </ContainerII>
         </HomeIV>
+        <Separator style={{ height: '50px' }} ></Separator>
       </HomeNode>
     );
   }
