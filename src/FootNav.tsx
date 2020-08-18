@@ -94,15 +94,24 @@ class FootNav extends Component<FootNavProp> {
   constructor(props: any){
     super(props);
 
-    this.theme = this.props.theme;
+    this.theme = localStorage.getItem('themeMode') === 'true'? true : false;
 
     this.themeChange = this.themeChange.bind(this);
   }
 
-  themeChange = (checked: any) => {
-    this.theme = !this.theme;
+  themeChange = (e: any) => {
     this.props.onThemeChange(this.theme);
+    console.log(this.theme);
   }
+
+  componentDidMount() {
+    this.theme = localStorage.getItem('themeMode') === 'true'? false : true;
+  }
+
+  componentDidUpdate() {
+    this.theme = localStorage.getItem('themeMode') === 'true'? false : true;
+  }
+
 
   render() {
     return (

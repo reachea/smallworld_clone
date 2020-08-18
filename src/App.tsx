@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { BackTop } from 'antd';
+import { SlackOutlined, SlackSquareOutlined } from '@ant-design/icons';
 
 import { withTranslation, WithTranslation } from 'react-i18next';
 
@@ -32,6 +34,42 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const NightMode = styled.div`
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 115px;
+  right: 100px;
+  border-radius: 100%;
+  z-index: 10;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    right: 60px;
+  }
+
+  @media (max-width: 479px) {
+    right: 20px;
+  }
+`;
+
+const NightModeIconDark = styled(SlackSquareOutlined)`
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  font-size: 46px;
+`;
+
+const NightModeIconLight = styled(SlackOutlined)`
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  font-size: 46px;
+`;
+
+
 interface AppState {
   mode: any;
 }
@@ -55,6 +93,12 @@ class App extends React.Component<WithTranslation, AppState> {
     localStorage.setItem('themeMode', theme);
   }
 
+  themeChangeIcon = () => {
+    this.themeMode = !this.themeMode;
+    this.setState((e) => ({ mode: this.themeMode? 'dark' : 'light'}));
+    localStorage.setItem('themeMode', this.themeMode);
+  }
+
   componentDidMount() {
     const themeMode = localStorage.getItem('themeMode') === 'true';
     this.themeMode = themeMode;
@@ -67,6 +111,10 @@ class App extends React.Component<WithTranslation, AppState> {
         <Router>
         <ThemeProvider theme={ this.state } >
           <>
+          <NightMode onClick={this.themeChangeIcon} >
+              {this.themeMode? <NightModeIconLight/> : <NightModeIconDark/>}
+          </NightMode>
+          <BackTop/>
           <GlobalStyle />
             <ContentNode >
               <AllContent>
