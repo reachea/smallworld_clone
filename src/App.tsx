@@ -119,7 +119,7 @@ class App extends React.Component<WithTranslation, AppState> {
                   </Switch>
               </AllContent>
             </ContentNode>
-            <FootNav theme={this.themeMode} onThemeChange={this.themeChange} />
+            <FootNav />
           </>
         </ThemeProvider>
         </Router>

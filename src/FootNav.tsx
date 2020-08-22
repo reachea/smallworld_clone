@@ -82,36 +82,8 @@ const { Footer } = Layout;
   `;
 
 
-  interface FootNavProp {
-    onThemeChange: any;
-    theme: any;
-  }
 
-class FootNav extends Component<FootNavProp> {
-
-  protected theme:any
-
-  constructor(props: any){
-    super(props);
-
-    this.theme = localStorage.getItem('themeMode') === 'true'? true : false;
-
-    this.themeChange = this.themeChange.bind(this);
-  }
-
-  themeChange = (e: any) => {
-    this.props.onThemeChange(this.theme);
-    console.log(this.theme);
-  }
-
-  componentDidMount() {
-    this.theme = localStorage.getItem('themeMode') === 'true'? false : true;
-  }
-
-  componentDidUpdate() {
-    this.theme = localStorage.getItem('themeMode') === 'true'? false : true;
-  }
-
+class FootNav extends Component {
 
   render() {
     return (
@@ -194,7 +166,6 @@ class FootNav extends Component<FootNavProp> {
                 </Row>
                 <Row>
                   <Col span={6} >
-                    <Switch checked={this.theme} onChange={this.themeChange} style={{ marginTop: "10px", marginLeft: "15px" }} />
                   </Col>
                   <FootCol span={7} ></FootCol>
                   <FootCol span={7} ></FootCol>
