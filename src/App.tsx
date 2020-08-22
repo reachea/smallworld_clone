@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 import { BackTop } from 'antd';
-import { SlackOutlined, SlackSquareOutlined } from '@ant-design/icons';
 
 import { withTranslation, WithTranslation } from 'react-i18next';
 
@@ -19,6 +18,10 @@ import Spaces from './components/Spaces';
 
 // Styled Components
 import {ContentNode, AllContent} from './styled-components/Style';
+
+// Extra images
+import Moon from './Moon';
+import Sun from './Sun';
 
 const AppNode = styled.div`
   font-family: sans-serif;
@@ -45,6 +48,8 @@ const NightMode = styled.div`
   text-align: center;
   overflow: hidden;
   cursor: pointer;
+  background-color: rgba(0,0,0,.5);
+  padding-top: 7px;
 
   @media (max-width: 768px) {
     right: 60px;
@@ -53,20 +58,6 @@ const NightMode = styled.div`
   @media (max-width: 479px) {
     right: 20px;
   }
-`;
-
-const NightModeIconDark = styled(SlackSquareOutlined)`
-  position: absolute;
-  left: -3px;
-  top: -3px;
-  font-size: 46px;
-`;
-
-const NightModeIconLight = styled(SlackOutlined)`
-  position: absolute;
-  left: -3px;
-  top: -3px;
-  font-size: 46px;
 `;
 
 
@@ -111,8 +102,8 @@ class App extends React.Component<WithTranslation, AppState> {
         <Router>
         <ThemeProvider theme={ this.state } >
           <>
-          <NightMode onClick={this.themeChangeIcon} >
-              {this.themeMode? <NightModeIconLight/> : <NightModeIconDark/>}
+          <NightMode onClick={this.themeChangeIcon}>
+            {this.themeMode? <Sun/> : <Moon/>}
           </NightMode>
           <BackTop/>
           <GlobalStyle />
