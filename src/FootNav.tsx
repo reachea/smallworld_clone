@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Layout, Button, Row, Col, Switch } from 'antd';
+import { Layout, Button, Row, Col } from 'antd';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
